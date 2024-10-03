@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Alergias" xml:space="preserve">
+    <value>Alergias</value>
+  </data>
+  <data name="Aluno_btn" xml:space="preserve">
+    <value>Alumno</value>
+  </data>
+  <data name="Aulas_btn" xml:space="preserve">
+    <value>Clases</value>
+  </data>
+  <data name="Avaliacao_btn" xml:space="preserve">
+    <value>Evaluación</value>
+  </data>
+  <data name="btn_salvar" xml:space="preserve">
+    <value>Ahorrar</value>
+  </data>
+  <data name="Colaborador_btn" xml:space="preserve">
+    <value>Colaborador</value>
+  </data>
+  <data name="Config" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="DateAdmissao" xml:space="preserve">
+    <value>Admisión</value>
+  </data>
+  <data name="DateDataAvaliacao" xml:space="preserve">
+    <value>Fecha de evaluación</value>
+  </data>
+  <data name="DateEntrada" xml:space="preserve">
+    <value>Prohibido</value>
+  </data>
+  <data name="DateFim" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="DateInicio" xml:space="preserve">
+    <value>Comenzar</value>
+  </data>
+  <data name="DateNascimento" xml:space="preserve">
+    <value>Nacimiento</value>
+  </data>
+  <data name="DateSaida" xml:space="preserve">
+    <value>Salida</value>
+  </data>
+  <data name="Diabetes" xml:space="preserve">
+    <value>Diabetes</value>
+  </data>
+  <data name="Frequencia_btn" xml:space="preserve">
+    <value>Frecuencia</value>
+  </data>
+  <data name="Gravidez" xml:space="preserve">
+    <value>Embarazo</value>
+  </data>
+  <data name="Home_btn" xml:space="preserve">
+    <value>Principal</value>
+  </data>
+  <data name="IdiomaAlteradoComSucesso" xml:space="preserve">
+    <value>¡Idioma/región cambiado con éxito!</value>
+  </data>
+  <data name="IdiomaRegiao" xml:space="preserve">
+    <value>Idioma/Región</value>
+  </data>
+  <data name="LabelAdmissao" xml:space="preserve">
+    <value>Admisión</value>
+  </data>
+  <data name="LabelAltura" xml:space="preserve">
+    <value>Altura</value>
+  </data>
+  <data name="LabelAntebracoDir" xml:space="preserve">
+    <value>antebrazo derecho</value>
+  </data>
+  <data name="LabelAntebracoEsq" xml:space="preserve">
+    <value>antebrazo izquierdo</value>
+  </data>
+  <data name="LabelBairro" xml:space="preserve">
+    <value>Vecindario</value>
+  </data>
+  <data name="LabelBicepsDir" xml:space="preserve">
+    <value>Bíceps derecho</value>
+  </data>
+  <data name="LabelBicepsEsq" xml:space="preserve">
+    <value>Bíceps izquierdo</value>
+  </data>
+  <data name="LabelCep" xml:space="preserve">
+    <value>código postal</value>
+  </data>
+  <data name="LabelCepLogradouro" xml:space="preserve">
+    <value>Código Postal Calle</value>
+  </data>
+  <data name="LabelCidade" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="LabelCintura" xml:space="preserve">
+    <value>Cintura</value>
+  </data>
+  <data name="LabelComplemento" xml:space="preserve">
+    <value>Complementar</value>
+  </data>
+  <data name="LabelCoxaDir" xml:space="preserve">
+    <value>muslo derecho</value>
+  </data>
+  <data name="LabelCoxaEsq" xml:space="preserve">
+    <value>muslo izquierdo</value>
+  </data>
+  <data name="LabelCpf" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="LabelCpfAluno" xml:space="preserve">
+    <value>Estudiante CPF</value>
+  </data>
+  <data name="LabelData" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="LabelEntrada" xml:space="preserve">
+    <value>Entrada</value>
+  </data>
+  <data name="LabelFim" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="LabelId" xml:space="preserve">
+    <value>IDENTIFICACIÓN</value>
+  </data>
+  <data name="LabelIdAluno" xml:space="preserve">
+    <value>Identificación de estudiante</value>
+  </data>
+  <data name="LabelIdLogradouro" xml:space="preserve">
+    <value>ID de calle</value>
+  </data>
+  <data name="LabelImc" xml:space="preserve">
+    <value>imc</value>
+  </data>
+  <data name="LabelInicio" xml:space="preserve">
+    <value>Comenzar</value>
+  </data>
+  <data name="LabelLaudoMedico" xml:space="preserve">
+    <value>Informe medico</value>
+  </data>
+  <data name="LabelLesões Musculares" xml:space="preserve">
+    <value>Lesiones musculares</value>
+  </data>
+  <data name="LabelLogradouro" xml:space="preserve">
+    <value>lugar publico</value>
+  </data>
+  <data name="LabelMassaGorda" xml:space="preserve">
+    <value>masa grasa</value>
+  </data>
+  <data name="LabelMassaMagra" xml:space="preserve">
+    <value>Masa magra</value>
+  </data>
+  <data name="LabelNascimento" xml:space="preserve">
+    <value>Nacimiento</value>
+  </data>
+  <data name="LabelNome" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="LabelNomeAluno" xml:space="preserve">
+    <value>Nombre del estudiante</value>
+  </data>
+  <data name="LabelNumero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="LabelObjetivo" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="LabelObservacaoRestricao" xml:space="preserve">
+    <value>Restricción de observación</value>
+  </data>
+  <data name="LabelObservacoes" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="LabelPais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="LabelPanturrilhaDir" xml:space="preserve">
+    <value>pantorrilla derecha</value>
+  </data>
+  <data name="LabelPanturrilhaEsq" xml:space="preserve">
+    <value>Pantorrilla Izquierda</value>
+  </data>
+  <data name="LabelPercentualGordura" xml:space="preserve">
+    <value>Porcentaje de grasa</value>
+  </data>
+  <data name="LabelPeso" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="LabelPesoIdeal" xml:space="preserve">
+    <value>Peso Ideal</value>
+  </data>
+  <data name="LabelPlano" xml:space="preserve">
+    <value>Planes</value>
+  </data>
+  <data name="LabelQuadril" xml:space="preserve">
+    <value>Cadera</value>
+  </data>
+  <data name="LabelReSenha" xml:space="preserve">
+    <value>Volver a contraseña</value>
+  </data>
+  <data name="LabelRestricoes" xml:space="preserve">
+    <value>Restricciones</value>
+  </data>
+  <data name="LabelSaida" xml:space="preserve">
+    <value>Salida</value>
+  </data>
+  <data name="LabelSenha" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="LabelTelefone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="LabelTorax" xml:space="preserve">
+    <value>Pecho</value>
+  </data>
+  <data name="LabelUf" xml:space="preserve">
+    <value>Uf</value>
+  </data>
+  <data name="Labirinto" xml:space="preserve">
+    <value>Laberinto</value>
+  </data>
+  <data name="LesoesMusculares" xml:space="preserve">
+    <value>Lesiones musculares</value>
+  </data>
+  <data name="Login_btn" xml:space="preserve">
+    <value>Iniciar sesión/Cerrar sesión</value>
+  </data>
+  <data name="Logradouro_btn" xml:space="preserve">
+    <value>lugar publico</value>
+  </data>
+  <data name="Matricula_btn" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="MsgConfirmarFechamento" xml:space="preserve">
+    <value>¿Estás seguro de que quieres cerrar la ventana?</value>
+  </data>
+  <data name="Nenhuma" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Outras" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="PressaoAlta" xml:space="preserve">
+    <value>Hipertensión</value>
+  </data>
+  <data name="ProblemasCardiacos" xml:space="preserve">
+    <value>Problemas del corazón</value>
+  </data>
+  <data name="ProblemasRespiratorios" xml:space="preserve">
+    <value>Problemas respiratorios</value>
+  </data>
+  <data name="RdbAdministrador" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="RdbAnual" xml:space="preserve">
+    <value>Anual</value>
+  </data>
+  <data name="RdbAtendente" xml:space="preserve">
+    <value>Asistente</value>
+  </data>
+  <data name="RdbClt" xml:space="preserve">
+    <value>clt</value>
+  </data>
+  <data name="RdbEstagio" xml:space="preserve">
+    <value>Pasantía</value>
+  </data>
+  <data name="RdbInstrutor" xml:space="preserve">
+    <value>Instructor</value>
+  </data>
+  <data name="RdbMensal" xml:space="preserve">
+    <value>Mensual</value>
+  </data>
+  <data name="RdbSemestral" xml:space="preserve">
+    <value>Semestral</value>
+  </data>
+  <data name="RdbTrimestral" xml:space="preserve">
+    <value>Trimestral</value>
+  </data>
+  <data name="RemediosUsoContinuo" xml:space="preserve">
+    <value>Medicamentos de uso continuo</value>
+  </data>
+  <data name="Senha_btn" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="TituloConfirmarFechamento" xml:space="preserve">
+    <value>Confirmación de pago</value>
+  </data>
+  <data name="Treinos_btn" xml:space="preserve">
+    <value>Entrenamientos</value>
+  </data>
+  <data name="txtAltura" xml:space="preserve">
+    <value>Altura</value>
+  </data>
+  <data name="txtAntebracoDir" xml:space="preserve">
+    <value>antebrazo derecho</value>
+  </data>
+  <data name="txtAntebracoEsq" xml:space="preserve">
+    <value>antebrazo izquierdo</value>
+  </data>
+  <data name="txtBicepsDir" xml:space="preserve">
+    <value>Bíceps derecho</value>
+  </data>
+  <data name="txtBicepsEsq" xml:space="preserve">
+    <value>Bíceps izquierdo</value>
+  </data>
+  <data name="txtBlockObjetivo" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="txtBlockObservacaoRestricao" xml:space="preserve">
+    <value>Restricción de observación</value>
+  </data>
+  <data name="txtBlockObservacoes" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="txtCep" xml:space="preserve">
+    <value>código postal</value>
+  </data>
+  <data name="txtCepLogradouro" xml:space="preserve">
+    <value>Código Postal Calle</value>
+  </data>
+  <data name="txtCidade" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="txtCintura" xml:space="preserve">
+    <value>Cintura</value>
+  </data>
+  <data name="txtComplemento" xml:space="preserve">
+    <value>Complementar</value>
+  </data>
+  <data name="txtCoxaDir" xml:space="preserve">
+    <value>muslo derecho</value>
+  </data>
+  <data name="txtCpf" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="txtCpfAluno" xml:space="preserve">
+    <value>Estudiante CPF</value>
+  </data>
+  <data name="txtEmail" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="txtId" xml:space="preserve">
+    <value>IDENTIFICACIÓN</value>
+  </data>
+  <data name="txtIdAluno" xml:space="preserve">
+    <value>Identificación de estudiante</value>
+  </data>
+  <data name="txtIdLogradouro" xml:space="preserve">
+    <value>ID de calle</value>
+  </data>
+  <data name="txtImc" xml:space="preserve">
+    <value>imc</value>
+  </data>
+  <data name="txtLaudoMedico" xml:space="preserve">
+    <value>Informe medico</value>
+  </data>
+  <data name="txtLogradouro" xml:space="preserve">
+    <value>lugar publico</value>
+  </data>
+  <data name="txtMassaGorda" xml:space="preserve">
+    <value>masa grasa</value>
+  </data>
+  <data name="txtMassaMagra" xml:space="preserve">
+    <value>Masa magra</value>
+  </data>
+  <data name="txtNome" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="txtNomeAluno" xml:space="preserve">
+    <value>Nombre del estudiante</value>
+  </data>
+  <data name="txtNumero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="txtPais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="txtPanturrilhaDir" xml:space="preserve">
+    <value>pantorrilla derecha</value>
+  </data>
+  <data name="txtPanturrilhaEsq" xml:space="preserve">
+    <value>Pantorrilla Izquierda</value>
+  </data>
+  <data name="txtPercentualGordura" xml:space="preserve">
+    <value>Porcentaje de grasa</value>
+  </data>
+  <data name="txtPeso" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="txtPesoIdeal" xml:space="preserve">
+    <value>Peso Ideal</value>
+  </data>
+  <data name="txtQuadril" xml:space="preserve">
+    <value>Cadera</value>
+  </data>
+  <data name="txtReSenha" xml:space="preserve">
+    <value>Volver a contraseña</value>
+  </data>
+  <data name="txtSenha" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="txtTelefone" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="txtTorax" xml:space="preserve">
+    <value>Pecho</value>
+  </data>
+  <data name="txtUf" xml:space="preserve">
+    <value>Uf</value>
+  </data>
+</root>
