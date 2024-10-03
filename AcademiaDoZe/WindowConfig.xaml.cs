@@ -10,14 +10,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
 /// <summary>
-/// Interação lógica para WindowConfig.xam
+/// Lógica interna para WindowConfig.xaml
 /// </summary>
-public partial class WindowConfig : Page
+public partial class WindowConfig : Window
 {
 	public WindowConfig()
 	{

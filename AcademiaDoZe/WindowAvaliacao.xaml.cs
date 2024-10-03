@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
 /// <summary>
-/// Interação lógica para PageColaborador.xam
+/// Lógica interna para WindowAvaliacao.xaml
 /// </summary>
-public partial class PageColaborador : Page
+public partial class WindowAvaliacao : Window
 {
-	public PageColaborador()
+	public WindowAvaliacao()
 	{
 		InitializeComponent();
 	}

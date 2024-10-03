@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
 /// <summary>
-/// Interação lógica para PageFrequencia.xam
+/// Lógica interna para WindowMatricula.xaml
 /// </summary>
-public partial class PageFrequencia : Page
+public partial class WindowMatricula : Window
 {
-	public PageFrequencia()
+	public WindowMatricula()
 	{
 		InitializeComponent();
 	}

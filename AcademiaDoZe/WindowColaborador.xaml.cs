@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
 /// <summary>
-/// Interação lógica para PageSenha.xam
+/// Lógica interna para WindowColaborador.xaml
 /// </summary>
-public partial class PageSenha : Page
+public partial class WindowColaborador : Window
 {
-	public PageSenha()
+	public WindowColaborador()
 	{
 		InitializeComponent();
 	}

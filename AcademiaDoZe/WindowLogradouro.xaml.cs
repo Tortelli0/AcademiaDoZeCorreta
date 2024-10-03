@@ -10,16 +10,15 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
 /// <summary>
-/// Interação lógica para PageLogradouro.xam
+/// Lógica interna para WindowLogradouro.xaml
 /// </summary>
-public partial class PageLogradouro : Page
+public partial class WindowLogradouro : Window
 {
-	public PageLogradouro()
+	public WindowLogradouro()
 	{
 		InitializeComponent();
 	}
