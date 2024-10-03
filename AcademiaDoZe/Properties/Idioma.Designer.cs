@@ -22,7 +22,7 @@ namespace AcademiaDoZe.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Idioma {
+    public class Idioma {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace AcademiaDoZe.Properties {
         ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AcademiaDoZe.Properties.Idioma", typeof(Idioma).Assembly);
@@ -51,7 +51,7 @@ namespace AcademiaDoZe.Properties {
         ///   pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Alergias.
         /// </summary>
-        internal static string Alergias {
+        public static string Alergias {
             get {
                 return ResourceManager.GetString("Alergias", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Aluno.
         /// </summary>
-        internal static string Aluno_btn {
+        public static string Aluno_btn {
             get {
                 return ResourceManager.GetString("Aluno_btn", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Aulas.
         /// </summary>
-        internal static string Aulas_btn {
+        public static string Aulas_btn {
             get {
                 return ResourceManager.GetString("Aulas_btn", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Avaliação.
         /// </summary>
-        internal static string Avaliacao_btn {
+        public static string Avaliacao_btn {
             get {
                 return ResourceManager.GetString("Avaliacao_btn", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
         /// </summary>
-        internal static string btn_salvar {
+        public static string btn_salvar {
             get {
                 return ResourceManager.GetString("btn_salvar", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Colaborador.
         /// </summary>
-        internal static string Colaborador_btn {
+        public static string Colaborador_btn {
             get {
                 return ResourceManager.GetString("Colaborador_btn", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Configurações.
         /// </summary>
-        internal static string Config {
+        public static string Config {
             get {
                 return ResourceManager.GetString("Config", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Admissão.
         /// </summary>
-        internal static string DateAdmissao {
+        public static string DateAdmissao {
             get {
                 return ResourceManager.GetString("DateAdmissao", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Data Avaliação.
         /// </summary>
-        internal static string DateDataAvaliacao {
+        public static string DateDataAvaliacao {
             get {
                 return ResourceManager.GetString("DateDataAvaliacao", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Entrada.
         /// </summary>
-        internal static string DateEntrada {
+        public static string DateEntrada {
             get {
                 return ResourceManager.GetString("DateEntrada", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Fim.
         /// </summary>
-        internal static string DateFim {
+        public static string DateFim {
             get {
                 return ResourceManager.GetString("DateFim", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Inicio.
         /// </summary>
-        internal static string DateInicio {
+        public static string DateInicio {
             get {
                 return ResourceManager.GetString("DateInicio", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nascimento.
         /// </summary>
-        internal static string DateNascimento {
+        public static string DateNascimento {
             get {
                 return ResourceManager.GetString("DateNascimento", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Saída.
         /// </summary>
-        internal static string DateSaida {
+        public static string DateSaida {
             get {
                 return ResourceManager.GetString("DateSaida", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Diabetes.
         /// </summary>
-        internal static string Diabetes {
+        public static string Diabetes {
             get {
                 return ResourceManager.GetString("Diabetes", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Frequência.
         /// </summary>
-        internal static string Frequencia_btn {
+        public static string Frequencia_btn {
             get {
                 return ResourceManager.GetString("Frequencia_btn", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Gravidez.
         /// </summary>
-        internal static string Gravidez {
+        public static string Gravidez {
             get {
                 return ResourceManager.GetString("Gravidez", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Principal.
         /// </summary>
-        internal static string Home_btn {
+        public static string Home_btn {
             get {
                 return ResourceManager.GetString("Home_btn", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Idioma/região alterado com sucesso!.
         /// </summary>
-        internal static string IdiomaAlteradoComSucesso {
+        public static string IdiomaAlteradoComSucesso {
             get {
                 return ResourceManager.GetString("IdiomaAlteradoComSucesso", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Idioma/Região.
         /// </summary>
-        internal static string IdiomaRegiao {
+        public static string IdiomaRegiao {
             get {
                 return ResourceManager.GetString("IdiomaRegiao", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Admissão.
         /// </summary>
-        internal static string LabelAdmissao {
+        public static string LabelAdmissao {
             get {
                 return ResourceManager.GetString("LabelAdmissao", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Altura.
         /// </summary>
-        internal static string LabelAltura {
+        public static string LabelAltura {
             get {
                 return ResourceManager.GetString("LabelAltura", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Antebraço Direito.
         /// </summary>
-        internal static string LabelAntebracoDir {
+        public static string LabelAntebracoDir {
             get {
                 return ResourceManager.GetString("LabelAntebracoDir", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Antebraço Esquerdo.
         /// </summary>
-        internal static string LabelAntebracoEsq {
+        public static string LabelAntebracoEsq {
             get {
                 return ResourceManager.GetString("LabelAntebracoEsq", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Bairro.
         /// </summary>
-        internal static string LabelBairro {
+        public static string LabelBairro {
             get {
                 return ResourceManager.GetString("LabelBairro", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Biceps Direito.
         /// </summary>
-        internal static string LabelBicepsDir {
+        public static string LabelBicepsDir {
             get {
                 return ResourceManager.GetString("LabelBicepsDir", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Biceps Esquerdo.
         /// </summary>
-        internal static string LabelBicepsEsq {
+        public static string LabelBicepsEsq {
             get {
                 return ResourceManager.GetString("LabelBicepsEsq", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cep.
         /// </summary>
-        internal static string LabelCep {
+        public static string LabelCep {
             get {
                 return ResourceManager.GetString("LabelCep", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cep Logradouro.
         /// </summary>
-        internal static string LabelCepLogradouro {
+        public static string LabelCepLogradouro {
             get {
                 return ResourceManager.GetString("LabelCepLogradouro", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cidade.
         /// </summary>
-        internal static string LabelCidade {
+        public static string LabelCidade {
             get {
                 return ResourceManager.GetString("LabelCidade", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cintura.
         /// </summary>
-        internal static string LabelCintura {
+        public static string LabelCintura {
             get {
                 return ResourceManager.GetString("LabelCintura", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Complemento.
         /// </summary>
-        internal static string LabelComplemento {
+        public static string LabelComplemento {
             get {
                 return ResourceManager.GetString("LabelComplemento", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Coxa Direita.
         /// </summary>
-        internal static string LabelCoxaDir {
+        public static string LabelCoxaDir {
             get {
                 return ResourceManager.GetString("LabelCoxaDir", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Coxa Esquerda.
         /// </summary>
-        internal static string LabelCoxaEsq {
+        public static string LabelCoxaEsq {
             get {
                 return ResourceManager.GetString("LabelCoxaEsq", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cpf.
         /// </summary>
-        internal static string LabelCpf {
+        public static string LabelCpf {
             get {
                 return ResourceManager.GetString("LabelCpf", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cpf Aluno.
         /// </summary>
-        internal static string LabelCpfAluno {
+        public static string LabelCpfAluno {
             get {
                 return ResourceManager.GetString("LabelCpfAluno", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Data.
         /// </summary>
-        internal static string LabelData {
+        public static string LabelData {
             get {
                 return ResourceManager.GetString("LabelData", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Email.
         /// </summary>
-        internal static string LabelEmail {
+        public static string LabelEmail {
             get {
                 return ResourceManager.GetString("LabelEmail", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Entrada.
         /// </summary>
-        internal static string LabelEntrada {
+        public static string LabelEntrada {
             get {
                 return ResourceManager.GetString("LabelEntrada", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Fim.
         /// </summary>
-        internal static string LabelFim {
+        public static string LabelFim {
             get {
                 return ResourceManager.GetString("LabelFim", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id.
         /// </summary>
-        internal static string LabelId {
+        public static string LabelId {
             get {
                 return ResourceManager.GetString("LabelId", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id Aluno.
         /// </summary>
-        internal static string LabelIdAluno {
+        public static string LabelIdAluno {
             get {
                 return ResourceManager.GetString("LabelIdAluno", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id Logradouro.
         /// </summary>
-        internal static string LabelIdLogradouro {
+        public static string LabelIdLogradouro {
             get {
                 return ResourceManager.GetString("LabelIdLogradouro", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Imc.
         /// </summary>
-        internal static string LabelImc {
+        public static string LabelImc {
             get {
                 return ResourceManager.GetString("LabelImc", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Inicio.
         /// </summary>
-        internal static string LabelInicio {
+        public static string LabelInicio {
             get {
                 return ResourceManager.GetString("LabelInicio", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Laudo Médico.
         /// </summary>
-        internal static string LabelLaudoMedico {
+        public static string LabelLaudoMedico {
             get {
                 return ResourceManager.GetString("LabelLaudoMedico", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Lesões Musculares.
         /// </summary>
-        internal static string LabelLesões_Musculares {
+        public static string LabelLesões_Musculares {
             get {
                 return ResourceManager.GetString("LabelLesões Musculares", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Logradouro.
         /// </summary>
-        internal static string LabelLogradouro {
+        public static string LabelLogradouro {
             get {
                 return ResourceManager.GetString("LabelLogradouro", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Massa Gorda.
         /// </summary>
-        internal static string LabelMassaGorda {
+        public static string LabelMassaGorda {
             get {
                 return ResourceManager.GetString("LabelMassaGorda", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Massa Magra.
         /// </summary>
-        internal static string LabelMassaMagra {
+        public static string LabelMassaMagra {
             get {
                 return ResourceManager.GetString("LabelMassaMagra", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nascimento.
         /// </summary>
-        internal static string LabelNascimento {
+        public static string LabelNascimento {
             get {
                 return ResourceManager.GetString("LabelNascimento", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nome.
         /// </summary>
-        internal static string LabelNome {
+        public static string LabelNome {
             get {
                 return ResourceManager.GetString("LabelNome", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nome Aluno.
         /// </summary>
-        internal static string LabelNomeAluno {
+        public static string LabelNomeAluno {
             get {
                 return ResourceManager.GetString("LabelNomeAluno", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Numero.
         /// </summary>
-        internal static string LabelNumero {
+        public static string LabelNumero {
             get {
                 return ResourceManager.GetString("LabelNumero", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo.
         /// </summary>
-        internal static string LabelObjetivo {
+        public static string LabelObjetivo {
             get {
                 return ResourceManager.GetString("LabelObjetivo", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observação Restrição.
         /// </summary>
-        internal static string LabelObservacaoRestricao {
+        public static string LabelObservacaoRestricao {
             get {
                 return ResourceManager.GetString("LabelObservacaoRestricao", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
         /// </summary>
-        internal static string LabelObservacoes {
+        public static string LabelObservacoes {
             get {
                 return ResourceManager.GetString("LabelObservacoes", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Pais.
         /// </summary>
-        internal static string LabelPais {
+        public static string LabelPais {
             get {
                 return ResourceManager.GetString("LabelPais", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Panturrilha Direita.
         /// </summary>
-        internal static string LabelPanturrilhaDir {
+        public static string LabelPanturrilhaDir {
             get {
                 return ResourceManager.GetString("LabelPanturrilhaDir", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Panturrilha Esquerda.
         /// </summary>
-        internal static string LabelPanturrilhaEsq {
+        public static string LabelPanturrilhaEsq {
             get {
                 return ResourceManager.GetString("LabelPanturrilhaEsq", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Percentual Gordura.
         /// </summary>
-        internal static string LabelPercentualGordura {
+        public static string LabelPercentualGordura {
             get {
                 return ResourceManager.GetString("LabelPercentualGordura", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Peso.
         /// </summary>
-        internal static string LabelPeso {
+        public static string LabelPeso {
             get {
                 return ResourceManager.GetString("LabelPeso", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Peso Ideal.
         /// </summary>
-        internal static string LabelPesoIdeal {
+        public static string LabelPesoIdeal {
             get {
                 return ResourceManager.GetString("LabelPesoIdeal", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Plano.
         /// </summary>
-        internal static string LabelPlano {
+        public static string LabelPlano {
             get {
                 return ResourceManager.GetString("LabelPlano", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Quadril.
         /// </summary>
-        internal static string LabelQuadril {
+        public static string LabelQuadril {
             get {
                 return ResourceManager.GetString("LabelQuadril", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Re Senha.
         /// </summary>
-        internal static string LabelReSenha {
+        public static string LabelReSenha {
             get {
                 return ResourceManager.GetString("LabelReSenha", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Restrições.
         /// </summary>
-        internal static string LabelRestricoes {
+        public static string LabelRestricoes {
             get {
                 return ResourceManager.GetString("LabelRestricoes", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Saída.
         /// </summary>
-        internal static string LabelSaida {
+        public static string LabelSaida {
             get {
                 return ResourceManager.GetString("LabelSaida", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
         /// </summary>
-        internal static string LabelSenha {
+        public static string LabelSenha {
             get {
                 return ResourceManager.GetString("LabelSenha", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Telefone.
         /// </summary>
-        internal static string LabelTelefone {
+        public static string LabelTelefone {
             get {
                 return ResourceManager.GetString("LabelTelefone", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Torax.
         /// </summary>
-        internal static string LabelTorax {
+        public static string LabelTorax {
             get {
                 return ResourceManager.GetString("LabelTorax", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Uf.
         /// </summary>
-        internal static string LabelUf {
+        public static string LabelUf {
             get {
                 return ResourceManager.GetString("LabelUf", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Labirinto.
         /// </summary>
-        internal static string Labirinto {
+        public static string Labirinto {
             get {
                 return ResourceManager.GetString("Labirinto", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Lesões Musculares.
         /// </summary>
-        internal static string LesoesMusculares {
+        public static string LesoesMusculares {
             get {
                 return ResourceManager.GetString("LesoesMusculares", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Logon/Logoff.
         /// </summary>
-        internal static string Login_btn {
+        public static string Login_btn {
             get {
                 return ResourceManager.GetString("Login_btn", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Logradouro.
         /// </summary>
-        internal static string Logradouro_btn {
+        public static string Logradouro_btn {
             get {
                 return ResourceManager.GetString("Logradouro_btn", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Matrícula.
         /// </summary>
-        internal static string Matricula_btn {
+        public static string Matricula_btn {
             get {
                 return ResourceManager.GetString("Matricula_btn", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Você tem certeza que deseja fechar a janela?.
         /// </summary>
-        internal static string MsgConfirmarFechamento {
+        public static string MsgConfirmarFechamento {
             get {
                 return ResourceManager.GetString("MsgConfirmarFechamento", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nenhuma.
         /// </summary>
-        internal static string Nenhuma {
+        public static string Nenhuma {
             get {
                 return ResourceManager.GetString("Nenhuma", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Outras.
         /// </summary>
-        internal static string Outras {
+        public static string Outras {
             get {
                 return ResourceManager.GetString("Outras", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Pressão Alta.
         /// </summary>
-        internal static string PressaoAlta {
+        public static string PressaoAlta {
             get {
                 return ResourceManager.GetString("PressaoAlta", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Problemas Cardíacos.
         /// </summary>
-        internal static string ProblemasCardiacos {
+        public static string ProblemasCardiacos {
             get {
                 return ResourceManager.GetString("ProblemasCardiacos", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Problemas Respiratórios.
         /// </summary>
-        internal static string ProblemasRespiratorios {
+        public static string ProblemasRespiratorios {
             get {
                 return ResourceManager.GetString("ProblemasRespiratorios", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Administrador.
         /// </summary>
-        internal static string RdbAdministrador {
+        public static string RdbAdministrador {
             get {
                 return ResourceManager.GetString("RdbAdministrador", resourceCulture);
             }
@@ -819,7 +819,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Anual.
         /// </summary>
-        internal static string RdbAnual {
+        public static string RdbAnual {
             get {
                 return ResourceManager.GetString("RdbAnual", resourceCulture);
             }
@@ -828,7 +828,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Atendente.
         /// </summary>
-        internal static string RdbAtendente {
+        public static string RdbAtendente {
             get {
                 return ResourceManager.GetString("RdbAtendente", resourceCulture);
             }
@@ -837,7 +837,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Clt.
         /// </summary>
-        internal static string RdbClt {
+        public static string RdbClt {
             get {
                 return ResourceManager.GetString("RdbClt", resourceCulture);
             }
@@ -846,7 +846,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Estágio.
         /// </summary>
-        internal static string RdbEstagio {
+        public static string RdbEstagio {
             get {
                 return ResourceManager.GetString("RdbEstagio", resourceCulture);
             }
@@ -855,7 +855,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Instrutor.
         /// </summary>
-        internal static string RdbInstrutor {
+        public static string RdbInstrutor {
             get {
                 return ResourceManager.GetString("RdbInstrutor", resourceCulture);
             }
@@ -864,7 +864,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Mensal.
         /// </summary>
-        internal static string RdbMensal {
+        public static string RdbMensal {
             get {
                 return ResourceManager.GetString("RdbMensal", resourceCulture);
             }
@@ -873,7 +873,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Semestral.
         /// </summary>
-        internal static string RdbSemestral {
+        public static string RdbSemestral {
             get {
                 return ResourceManager.GetString("RdbSemestral", resourceCulture);
             }
@@ -882,7 +882,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Trimestral.
         /// </summary>
-        internal static string RdbTrimestral {
+        public static string RdbTrimestral {
             get {
                 return ResourceManager.GetString("RdbTrimestral", resourceCulture);
             }
@@ -891,7 +891,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Remédios Uso Continuo.
         /// </summary>
-        internal static string RemediosUsoContinuo {
+        public static string RemediosUsoContinuo {
             get {
                 return ResourceManager.GetString("RemediosUsoContinuo", resourceCulture);
             }
@@ -900,7 +900,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
         /// </summary>
-        internal static string Senha_btn {
+        public static string Senha_btn {
             get {
                 return ResourceManager.GetString("Senha_btn", resourceCulture);
             }
@@ -909,7 +909,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Confirmação de Saída.
         /// </summary>
-        internal static string TituloConfirmarFechamento {
+        public static string TituloConfirmarFechamento {
             get {
                 return ResourceManager.GetString("TituloConfirmarFechamento", resourceCulture);
             }
@@ -918,7 +918,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Treinos.
         /// </summary>
-        internal static string Treinos_btn {
+        public static string Treinos_btn {
             get {
                 return ResourceManager.GetString("Treinos_btn", resourceCulture);
             }
@@ -927,7 +927,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Altura.
         /// </summary>
-        internal static string txtAltura {
+        public static string txtAltura {
             get {
                 return ResourceManager.GetString("txtAltura", resourceCulture);
             }
@@ -936,7 +936,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Antebraço Direito.
         /// </summary>
-        internal static string txtAntebracoDir {
+        public static string txtAntebracoDir {
             get {
                 return ResourceManager.GetString("txtAntebracoDir", resourceCulture);
             }
@@ -945,7 +945,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Antebraço Esquerdo.
         /// </summary>
-        internal static string txtAntebracoEsq {
+        public static string txtAntebracoEsq {
             get {
                 return ResourceManager.GetString("txtAntebracoEsq", resourceCulture);
             }
@@ -954,7 +954,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Biceps Direito.
         /// </summary>
-        internal static string txtBicepsDir {
+        public static string txtBicepsDir {
             get {
                 return ResourceManager.GetString("txtBicepsDir", resourceCulture);
             }
@@ -963,7 +963,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Biceps Esquerdo.
         /// </summary>
-        internal static string txtBicepsEsq {
+        public static string txtBicepsEsq {
             get {
                 return ResourceManager.GetString("txtBicepsEsq", resourceCulture);
             }
@@ -972,7 +972,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo.
         /// </summary>
-        internal static string txtBlockObjetivo {
+        public static string txtBlockObjetivo {
             get {
                 return ResourceManager.GetString("txtBlockObjetivo", resourceCulture);
             }
@@ -981,7 +981,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observação Restrição.
         /// </summary>
-        internal static string txtBlockObservacaoRestricao {
+        public static string txtBlockObservacaoRestricao {
             get {
                 return ResourceManager.GetString("txtBlockObservacaoRestricao", resourceCulture);
             }
@@ -990,7 +990,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
         /// </summary>
-        internal static string txtBlockObservacoes {
+        public static string txtBlockObservacoes {
             get {
                 return ResourceManager.GetString("txtBlockObservacoes", resourceCulture);
             }
@@ -999,7 +999,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cep.
         /// </summary>
-        internal static string txtCep {
+        public static string txtCep {
             get {
                 return ResourceManager.GetString("txtCep", resourceCulture);
             }
@@ -1008,7 +1008,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cep Logradouro.
         /// </summary>
-        internal static string txtCepLogradouro {
+        public static string txtCepLogradouro {
             get {
                 return ResourceManager.GetString("txtCepLogradouro", resourceCulture);
             }
@@ -1017,7 +1017,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cidade.
         /// </summary>
-        internal static string txtCidade {
+        public static string txtCidade {
             get {
                 return ResourceManager.GetString("txtCidade", resourceCulture);
             }
@@ -1026,7 +1026,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cintura.
         /// </summary>
-        internal static string txtCintura {
+        public static string txtCintura {
             get {
                 return ResourceManager.GetString("txtCintura", resourceCulture);
             }
@@ -1035,7 +1035,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Complemento.
         /// </summary>
-        internal static string txtComplemento {
+        public static string txtComplemento {
             get {
                 return ResourceManager.GetString("txtComplemento", resourceCulture);
             }
@@ -1044,7 +1044,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Coxa Direita.
         /// </summary>
-        internal static string txtCoxaDir {
+        public static string txtCoxaDir {
             get {
                 return ResourceManager.GetString("txtCoxaDir", resourceCulture);
             }
@@ -1053,7 +1053,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cpf.
         /// </summary>
-        internal static string txtCpf {
+        public static string txtCpf {
             get {
                 return ResourceManager.GetString("txtCpf", resourceCulture);
             }
@@ -1062,7 +1062,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Cpf Aluno.
         /// </summary>
-        internal static string txtCpfAluno {
+        public static string txtCpfAluno {
             get {
                 return ResourceManager.GetString("txtCpfAluno", resourceCulture);
             }
@@ -1071,7 +1071,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Email.
         /// </summary>
-        internal static string txtEmail {
+        public static string txtEmail {
             get {
                 return ResourceManager.GetString("txtEmail", resourceCulture);
             }
@@ -1080,7 +1080,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id.
         /// </summary>
-        internal static string txtId {
+        public static string txtId {
             get {
                 return ResourceManager.GetString("txtId", resourceCulture);
             }
@@ -1089,7 +1089,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id Aluno.
         /// </summary>
-        internal static string txtIdAluno {
+        public static string txtIdAluno {
             get {
                 return ResourceManager.GetString("txtIdAluno", resourceCulture);
             }
@@ -1098,7 +1098,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Id Logradouro.
         /// </summary>
-        internal static string txtIdLogradouro {
+        public static string txtIdLogradouro {
             get {
                 return ResourceManager.GetString("txtIdLogradouro", resourceCulture);
             }
@@ -1107,7 +1107,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Imc.
         /// </summary>
-        internal static string txtImc {
+        public static string txtImc {
             get {
                 return ResourceManager.GetString("txtImc", resourceCulture);
             }
@@ -1116,7 +1116,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Laudo Médico.
         /// </summary>
-        internal static string txtLaudoMedico {
+        public static string txtLaudoMedico {
             get {
                 return ResourceManager.GetString("txtLaudoMedico", resourceCulture);
             }
@@ -1125,7 +1125,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Logradouro.
         /// </summary>
-        internal static string txtLogradouro {
+        public static string txtLogradouro {
             get {
                 return ResourceManager.GetString("txtLogradouro", resourceCulture);
             }
@@ -1134,7 +1134,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Massa Gorda.
         /// </summary>
-        internal static string txtMassaGorda {
+        public static string txtMassaGorda {
             get {
                 return ResourceManager.GetString("txtMassaGorda", resourceCulture);
             }
@@ -1143,7 +1143,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Massa Magra.
         /// </summary>
-        internal static string txtMassaMagra {
+        public static string txtMassaMagra {
             get {
                 return ResourceManager.GetString("txtMassaMagra", resourceCulture);
             }
@@ -1152,7 +1152,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nome.
         /// </summary>
-        internal static string txtNome {
+        public static string txtNome {
             get {
                 return ResourceManager.GetString("txtNome", resourceCulture);
             }
@@ -1161,7 +1161,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nome Aluno.
         /// </summary>
-        internal static string txtNomeAluno {
+        public static string txtNomeAluno {
             get {
                 return ResourceManager.GetString("txtNomeAluno", resourceCulture);
             }
@@ -1170,7 +1170,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Numero.
         /// </summary>
-        internal static string txtNumero {
+        public static string txtNumero {
             get {
                 return ResourceManager.GetString("txtNumero", resourceCulture);
             }
@@ -1179,7 +1179,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Pais.
         /// </summary>
-        internal static string txtPais {
+        public static string txtPais {
             get {
                 return ResourceManager.GetString("txtPais", resourceCulture);
             }
@@ -1188,7 +1188,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Panturrilha Direita.
         /// </summary>
-        internal static string txtPanturrilhaDir {
+        public static string txtPanturrilhaDir {
             get {
                 return ResourceManager.GetString("txtPanturrilhaDir", resourceCulture);
             }
@@ -1197,7 +1197,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Panturrilha Esquerda.
         /// </summary>
-        internal static string txtPanturrilhaEsq {
+        public static string txtPanturrilhaEsq {
             get {
                 return ResourceManager.GetString("txtPanturrilhaEsq", resourceCulture);
             }
@@ -1206,7 +1206,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Percentual Gordura.
         /// </summary>
-        internal static string txtPercentualGordura {
+        public static string txtPercentualGordura {
             get {
                 return ResourceManager.GetString("txtPercentualGordura", resourceCulture);
             }
@@ -1215,7 +1215,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Peso.
         /// </summary>
-        internal static string txtPeso {
+        public static string txtPeso {
             get {
                 return ResourceManager.GetString("txtPeso", resourceCulture);
             }
@@ -1224,7 +1224,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Peso Ideal.
         /// </summary>
-        internal static string txtPesoIdeal {
+        public static string txtPesoIdeal {
             get {
                 return ResourceManager.GetString("txtPesoIdeal", resourceCulture);
             }
@@ -1233,7 +1233,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Quadril.
         /// </summary>
-        internal static string txtQuadril {
+        public static string txtQuadril {
             get {
                 return ResourceManager.GetString("txtQuadril", resourceCulture);
             }
@@ -1242,7 +1242,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Re Senha.
         /// </summary>
-        internal static string txtReSenha {
+        public static string txtReSenha {
             get {
                 return ResourceManager.GetString("txtReSenha", resourceCulture);
             }
@@ -1251,7 +1251,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
         /// </summary>
-        internal static string txtSenha {
+        public static string txtSenha {
             get {
                 return ResourceManager.GetString("txtSenha", resourceCulture);
             }
@@ -1260,7 +1260,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Telefone.
         /// </summary>
-        internal static string txtTelefone {
+        public static string txtTelefone {
             get {
                 return ResourceManager.GetString("txtTelefone", resourceCulture);
             }
@@ -1269,7 +1269,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Torax.
         /// </summary>
-        internal static string txtTorax {
+        public static string txtTorax {
             get {
                 return ResourceManager.GetString("txtTorax", resourceCulture);
             }
@@ -1278,7 +1278,7 @@ namespace AcademiaDoZe.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Uf.
         /// </summary>
-        internal static string txtUf {
+        public static string txtUf {
             get {
                 return ResourceManager.GetString("txtUf", resourceCulture);
             }

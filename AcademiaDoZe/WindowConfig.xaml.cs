@@ -22,4 +22,19 @@ public partial class WindowConfig : Window
 	{
 		InitializeComponent();
 	}
+
+	private void btn_EncerrarAplicacao_Click(object sender, RoutedEventArgs e)
+	{
+
+    }
+
+	private void salvaDB_Click(object sender, RoutedEventArgs e)
+	{
+
+	}
+
+	private void salvaIdioma_Click(object sender, RoutedEventArgs e)
+	{
+
+	}
 }
