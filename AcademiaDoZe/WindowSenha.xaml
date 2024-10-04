@@ -4,9 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe"
+        xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="WindowSenha" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowSenha" Height="320" Width="318" Closing="Window_Closing" KeyDown="Window_KeyDown">
+
+    <Grid Background="Black">
+
+        <xctk:MaskedTextBox Mask="000\.000\.000\-00" Margin="182,47,28,220" GotFocus="MaskedTextBox_GotFocus" LostFocus="MaskedTextBox_LostFocus" TabIndex="0" />
+
+        <Label x:Name="LabelId" Content="{x:Static resources:Idioma.LabelId}" HorizontalAlignment="Left" Height="30" Margin="48,21,0,0" VerticalAlignment="Top" Width="84" Foreground="White"/>
+        <TextBox x:Name="txtid" HorizontalAlignment="Left" Height="20" Margin="48,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" IsEnabled="False"/>
+        <Label x:Name="LabelCpf" Content="{x:Static resources:Idioma.LabelCpf}" HorizontalAlignment="Left" Height="25" Margin="182,21,0,0" VerticalAlignment="Top" Width="89" Foreground="White"/>
+        <Label x:Name="LabelNome" Content="{x:Static resources:Idioma.LabelNome}" HorizontalAlignment="Left" Height="30" Margin="48,86,0,0" VerticalAlignment="Top" Width="95" Foreground="White"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Center" Height="20" Margin="0,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" IsEnabled="False"/>
+        <Label x:Name="LabelSenha" Content="{x:Static resources:Idioma.LabelSenha}" HorizontalAlignment="Left" Height="30" Margin="48,155,0,0" VerticalAlignment="Top" Width="95" Foreground="White"/>
+        <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="20" Margin="48,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" GotFocus="txtSenha_GotFocus" LostFocus="txtSenha_LostFocus" TabIndex="1"/>
+        <Label x:Name="LabelReSenha" Content="{x:Static resources:Idioma.LabelReSenha}" HorizontalAlignment="Left" Height="30" Margin="182,155,0,0" VerticalAlignment="Top" Width="95" Foreground="White"/>
+        <TextBox x:Name="txtReSenha" HorizontalAlignment="Left" Height="20" Margin="182,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" GotFocus="txtReSenha_GotFocus" LostFocus="txtReSenha_LostFocus" TabIndex="2"/>
+        <Button x:Name="btn_salvar" Content="{x:Static resources:Idioma.btn_salvar}" HorizontalAlignment="Left" Height="34" Margin="182,234,0,0" VerticalAlignment="Top" Width="95" Click="btn_salvar_Click" TabIndex="3" KeyDown="btn_salvar_KeyDown"/>
+
     </Grid>
+
 </Window>
