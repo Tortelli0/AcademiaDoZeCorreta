@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe"
+        xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="WindowFrequencia" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowFrequencia" Height="320" Width="357" Closing="Window_Closing" KeyDown="Window_KeyDown">
+
+    <Grid Background="Black">
+
+        <xctk:MaskedTextBox x:Name="txtCpfAluno" Mask="000\.000\.000\-00" Margin="232,40,10,222" GotFocus="txtCpfAluno_GotFocus_1" LostFocus="txtCpfAluno_LostFocus_1" TabIndex="0" />
+
+        <xctk:MaskedTextBox x:Name="DateEntrada" Mask="00/00/0000" Margin="10,107,169,142" GotFocus="DateEntrada_GotFocus" LostFocus="DateEntrada_LostFocus" TabIndex="1" />
+
+        <xctk:MaskedTextBox x:Name="DateSaida" Mask="00/00/0000" Margin="10,193,169,53" GotFocus="DateSaida_GotFocus" LostFocus="DateSaida_LostFocus" TabIndex="2" />
+
+        <Label x:Name="LabelId" Content="{x:Static resources:Idioma.LabelId}" HorizontalAlignment="Left" Height="25" Margin="10,15,0,0" VerticalAlignment="Top" Width="28" Foreground="White"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="20" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" IsEnabled="False"/>
+        <TextBox x:Name="txtIdAluno" HorizontalAlignment="Left" Height="20" Margin="93,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" IsEnabled="False"/>
+        <Label x:Name="LabelIdAluno" Content="{x:Static resources:Idioma.LabelIdAluno}" HorizontalAlignment="Left" Height="25" Margin="90,15,0,0" VerticalAlignment="Top" Width="142" Foreground="White"/>
+        <Label x:Name="LabelCpfAluno" Content="{x:Static resources:Idioma.LabelCpfAluno}" HorizontalAlignment="Left" Height="25" Margin="232,15,0,0" VerticalAlignment="Top" Width="138" Foreground="White"/>
+        <Label x:Name="LabelEntrada" Content="{x:Static resources:Idioma.LabelEntrada}" HorizontalAlignment="Left" Height="25" Margin="10,77,0,0" VerticalAlignment="Top" Width="90" Foreground="White"/>
+        <Label x:Name="LabelSaida" Content="{x:Static resources:Idioma.LabelSaida}" HorizontalAlignment="Left" Height="25" Margin="10,168,0,0" VerticalAlignment="Top" Width="90" Foreground="White"/>
+        <Button x:Name="btn_salvar" Content="{x:Static resources:Idioma.btn_salvar}" HorizontalAlignment="Left" Height="30" Margin="216,237,0,0" VerticalAlignment="Top" Width="104" Click="btn_salvar_Click" TabIndex="3" KeyDown="btn_salvar_KeyDown"/>
+
     </Grid>
 </Window>
