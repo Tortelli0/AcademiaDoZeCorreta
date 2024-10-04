@@ -9,6 +9,30 @@
       Title="PageListaLogradouro">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="buttonNovo" Margin="3" Padding="3" Content="Novo" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" Click="ButtonNovo_OnClick"/>
+            <Button x:Name="buttonEditar" Margin="3" Padding="3" Content="Editar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}"/>
+            <Button x:Name="buttonExcluir" Margin="3" Padding="3" Content="Deletar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}"/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+            <DataGrid ItemsSource="{Binding Logradouros}" SelectedItem="{Binding SelectedLogradouro}" AutoGenerateColumns="False" IsReadOnly="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Cep" Binding="{Binding Cep, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Uf" Binding="{Binding Uf, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="País" Binding="{Binding Pais, UpdateSourceTrigger=PropertyChanged}"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </ScrollViewer>
     </Grid>
 </Page>

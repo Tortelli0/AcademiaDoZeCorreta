@@ -4,9 +4,75 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe"
+        xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="637" Width="800" Closing="Window_Closing" KeyDown="Window_KeyDown">
+
+    <Grid Background="#FF2F2C2C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="590" VerticalAlignment="Center" Width="177" Background="Black">
+            <DockPanel Height="15" LastChildFill="False" VerticalAlignment="Top" Background="White" Margin="0,-15,-623,0"/>
+            <Button x:Name="Home_btn" Content="Home" HorizontalAlignment="Left" Height="23" Margin="2,10,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.709,1.275" Foreground="White" BorderBrush="Black" Click="Home_btn_Click" TabIndex="0">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Logradouro_btn" Content="{x:Static resources:Idioma.LabelLogradouro}" HorizontalAlignment="Center" Height="23" Margin="0,38,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.729,0.324" Click="Logradouro_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="1">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Aluno_btn" Content="{x:Static resources:Idioma.Aluno_btn}" HorizontalAlignment="Center" Height="23" Margin="0,66,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Click="Aluno_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="2">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Colaborador_btn" Content="{x:Static resources:Idioma.Colaborador_btn}" HorizontalAlignment="Center" Height="23" Margin="0,94,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.729,0.324" Click="Colaborador_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="3">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Senha_btn" Content="{x:Static resources:Idioma.Senha_btn}" HorizontalAlignment="Left" Height="23" Margin="2,122,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Click="Senha_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="4">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Matricula_btn" Content="{x:Static resources:Idioma.Matricula_btn}" HorizontalAlignment="Center" Height="22" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Click="Matricula_btn_Click" Foreground="White" BorderBrush="Black" Margin="0,207,0,0" TabIndex="7">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Avaliacao_btn" Content="{x:Static resources:Idioma.Avaliacao_btn}" HorizontalAlignment="Center" Height="23" Margin="0,150,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Click="Avaliacao_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="5">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Frequencia_btn" Content="{x:Static resources:Idioma.Frequencia_btn}" HorizontalAlignment="Center" Height="24" Margin="0,178,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Click="Frequencia_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="6">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Treinos_btn" Content="{x:Static resources:Idioma.Treinos_btn}" HorizontalAlignment="Left" Height="23" Margin="2,262,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Foreground="White" BorderBrush="Black" TabIndex="9">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Login_btn" Content="{x:Static resources:Idioma.Login_btn}" HorizontalAlignment="Center" Height="23" Margin="0,290,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.783,0.669" Click="Login_btn_Click" Foreground="White" BorderBrush="Black" TabIndex="-6">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="Aulas_btn" Content="{x:Static resources:Idioma.Aulas_btn}" HorizontalAlignment="Left" Height="23" Margin="2,234,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.729,0.324" Foreground="White" BorderBrush="Black" TabIndex="8">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="ButtonConfig" Content="{x:Static resources:Idioma.Config}" HorizontalAlignment="Left" Height="29" Margin="2,504,0,0" VerticalAlignment="Top" Width="176" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ButtonConfig_Click" TabIndex="11"/>
+        </Grid>
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,606,0,0" Width="800" Background="White"/>
+        <DockPanel LastChildFill="False"/>
 
     </Grid>
 </Window>

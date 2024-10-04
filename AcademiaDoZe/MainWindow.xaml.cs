@@ -1,4 +1,6 @@
-﻿using System.Globalization;
+﻿using AcademiaDoZe.Model;
+using System.Configuration;
+using System.Globalization;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,9 +18,24 @@ namespace AcademiaDoZe;
 /// </summary>
 public partial class MainWindow : Window
 {
+	// Atributos para conexão e persistência com o banco de dados
+	private string ConnectionString { get; set; }
+	private string ProviderName { get; set; }
+
 	public MainWindow()
 	{
 		InitializeComponent();
+
+
+		WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
+		// valida a conexão com o banco de dados
+		ClassFuncoes.ValidaConexaoDB();
+
+		// busca os dados de conexão com o banco de dados, do arquivo de configuração
+		// e deixa disponível para toda a aplicação através de propriedades
+		ProviderName = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
+		ConnectionString = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
 	}
 
 	private void ChangeLanguage(string cultureCode)
@@ -34,5 +51,98 @@ public partial class MainWindow : Window
 		Application.Current.MainWindow = newWindow;
 		newWindow.Show();
 		oldWindow.Close();
+	}
+
+	private void Logradouro_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowLogradouro windowLogradouro = new WindowLogradouro(ConnectionString, ProviderName);
+
+		windowLogradouro.Show();
+	}
+
+	private void Aluno_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowAluno windowAluno = new WindowAluno(ConnectionString, ProviderName);
+
+		windowAluno.Show();
+	}
+
+	private void Colaborador_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowColaborador windowColaborador = new WindowColaborador(ConnectionString, ProviderName);
+
+		windowColaborador.Show();
+	}
+
+	private void Senha_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowSenha windowSenha = new WindowSenha(ConnectionString, ProviderName);
+
+		windowSenha.Show();
+	}
+
+	private void Avaliacao_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowAvaliacao windowAvaliacao = new WindowAvaliacao(ConnectionString, ProviderName);
+
+		windowAvaliacao.Show();
+	}
+
+	private void Frequencia_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowFrequencia windwFrequencia = new WindowFrequencia(ConnectionString, ProviderName);
+
+		windwFrequencia.Show();
+	}
+
+	private void Matricula_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowMatricula windowMatricula = new WindowMatricula(ConnectionString, ProviderName);
+
+		windowMatricula.Show();
+	}
+
+	private void Login_btn_Click(object sender, RoutedEventArgs e)
+	{
+		WindowLogin windowLogin = new WindowLogin(ConnectionString, ProviderName);
+
+		windowLogin.Show();
+	}
+
+	private void ButtonConfig_Click(object sender, RoutedEventArgs e)
+	{
+		WindowConfig windowConfig = new WindowConfig(ConnectionString, ProviderName);
+
+		windowConfig.Show();
+	}
+
+	private void Home_btn_Click(object sender, RoutedEventArgs e)
+	{
+		MainWindow mainWindow = new MainWindow();
+
+		mainWindow.Show();
+	}
+
+	private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+	{
+		// Mensagem de confirmação
+		MessageBoxResult result = MessageBox.Show(
+			Properties.Idioma.MsgConfirmarFechamento,
+			Properties.Idioma.TituloConfirmarFechamento,
+			MessageBoxButton.YesNo,
+			MessageBoxImage.Question);
+
+		if (result == MessageBoxResult.No)
+		{
+			e.Cancel = true;
+		}
+	}
+
+	private void Window_KeyDown(object sender, KeyEventArgs e)
+	{
+		if (e.Key == Key.Escape)
+		{
+			Close();
+		}
 	}
 }
