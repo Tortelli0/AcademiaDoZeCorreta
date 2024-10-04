@@ -4,9 +4,64 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AcademiaDoZe"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
         mc:Ignorable="d"
-        Title="WindowAvaliacao" Height="450" Width="800">
-    <Grid>
-        
+        Title="WindowAvaliacao" Height="493" Width="630" Closing="Window_Closing" KeyDown="Window_KeyDown">
+
+    <Grid Background="Black">
+
+        <xctk:MaskedTextBox x:Name="DataAvaliacao" Mask="00/00/0000" Margin="10,93,528,339" GotFocus="DataAvaliacao_GotFocus" LostFocus="DataAvaliacao_LostFocus" TabIndex="1" />
+
+        <xctk:MaskedTextBox x:Name="txtCpfAluno" Mask="000\.000\.000\-00" Margin="166,34,347,395" GotFocus="txtCpfAluno_GotFocus_1" LostFocus="txtCpfAluno_LostFocus_1" TabIndex="0" />
+
+        <Label x:Name="LabelId" Content="{x:Static resources:Idioma.LabelId}" HorizontalAlignment="Left" Height="29" Margin="10,10,0,0" VerticalAlignment="Top" Width="39" Foreground="White"/>
+        <Label x:Name="LabelIdAluno" Content="{x:Static resources:Idioma.LabelIdAluno}" HorizontalAlignment="Left" Height="29" Margin="86,10,0,0" VerticalAlignment="Top" Width="75" Foreground="White"/>
+        <Label x:Name="LabelCpfAluno" Content="{x:Static resources:Idioma.LabelCpfAluno}" HorizontalAlignment="Left" Height="29" Margin="176,10,0,0" VerticalAlignment="Top" Width="107" Foreground="White"/>
+        <Label x:Name="LabelNomeAluno" Content="{x:Static resources:Idioma.LabelNomeAluno}" HorizontalAlignment="Left" Height="29" Margin="312,10,0,0" VerticalAlignment="Top" Width="200" Foreground="White"/>
+        <Label x:Name="LabelData" Content="{x:Static resources:Idioma.LabelData}" HorizontalAlignment="Left" Height="24" Margin="10,69,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
+        <Label x:Name="LabelPeso" Content="{x:Static resources:Idioma.LabelPeso}" HorizontalAlignment="Left" Height="29" Margin="10,132,0,0" VerticalAlignment="Top" Width="78" Foreground="White"/>
+        <Label x:Name="LabelAltura" Content="{x:Static resources:Idioma.LabelAltura}" HorizontalAlignment="Left" Height="29" Margin="108,132,0,0" VerticalAlignment="Top" Width="78" Foreground="White"/>
+        <Label x:Name="LabelTorax" Content="{x:Static resources:Idioma.LabelTorax}" HorizontalAlignment="Left" Height="29" Margin="10,193,0,0" VerticalAlignment="Top" Width="58" Foreground="White"/>
+        <Label x:Name="LabelCintura" Content="{x:Static resources:Idioma.LabelCintura}" HorizontalAlignment="Left" Height="29" Margin="122,193,0,0" VerticalAlignment="Top" Width="64" Foreground="White"/>
+        <Label x:Name="LabelQuadril" Content="{x:Static resources:Idioma.LabelQuadril}" HorizontalAlignment="Left" Height="29" Margin="232,193,0,0" VerticalAlignment="Top" Width="69" Foreground="White"/>
+        <Label x:Name="LabelAntebracoDir" Content="{x:Static resources:Idioma.LabelAntebracoDir}" HorizontalAlignment="Left" Height="27" Margin="4,254,0,0" VerticalAlignment="Top" Width="113" Foreground="White"/>
+        <Label x:Name="LabelAntebracoEsq" Content="{x:Static resources:Idioma.LabelAntebracoEsq}" HorizontalAlignment="Left" Height="27" Margin="113,254,0,0" VerticalAlignment="Top" Width="121" Foreground="White"/>
+        <Label x:Name="LabelBicepsDir" Content="{x:Static resources:Idioma.LabelBicepsDir}" HorizontalAlignment="Left" Height="27" Margin="226,254,0,0" VerticalAlignment="Top" Width="89" Foreground="White"/>
+        <Label x:Name="LabelBicepsEsq" Content="{x:Static resources:Idioma.LabelBicepsEsq}" HorizontalAlignment="Left" Height="27" Margin="312,254,0,0" VerticalAlignment="Top" Width="97" Foreground="White"/>
+        <Label x:Name="LabelCoxaDir" Content="{x:Static resources:Idioma.LabelCoxaDir}" HorizontalAlignment="Left" Height="26" Margin="10,308,0,0" VerticalAlignment="Top" Width="92" Foreground="White"/>
+        <Label x:Name="LabelCoxaEsq" Content="{x:Static resources:Idioma.LabelCoxaEsq}" HorizontalAlignment="Left" Height="29" Margin="123,308,0,0" VerticalAlignment="Top" Width="121" Foreground="White"/>
+        <Label x:Name="LabelPanturrilhaDir" Content="{x:Static resources:Idioma.LabelPanturrilhaDir}" HorizontalAlignment="Left" Height="29" Margin="234,308,0,0" VerticalAlignment="Top" Width="114" Foreground="White"/>
+        <Label x:Name="LabelPanturrilhaEsq" Content="{x:Static resources:Idioma.LabelPanturrilhaEsq}" HorizontalAlignment="Left" Height="26" Margin="360,308,0,0" VerticalAlignment="Top" Width="150" Foreground="White"/>
+        <Label x:Name="LabelMassaMagra" Content="{x:Static resources:Idioma.LabelMassaMagra}" HorizontalAlignment="Left" Height="30" Margin="417,192,0,0" VerticalAlignment="Top" Width="88" Foreground="White"/>
+        <Label x:Name="LabelMassaGorda" Content="{x:Static resources:Idioma.LabelMassaGorda}" HorizontalAlignment="Left" Height="29" Margin="524,193,0,0" VerticalAlignment="Top" Width="82" Foreground="White"/>
+        <Label x:Name="LabelPercentualGordura" Content="{x:Static resources:Idioma.LabelPercentualGordura}" HorizontalAlignment="Left" Height="26" Margin="502,308,0,0" VerticalAlignment="Top" Width="128" Foreground="White" RenderTransformOrigin="0.543,0.475"/>
+        <Label x:Name="LabelImc" Content="IMC" HorizontalAlignment="Left" Height="27" Margin="412,254,0,0" VerticalAlignment="Top" Width="56" Foreground="White"/>
+        <Label x:Name="LabelPesoIdeal" Content="{x:Static resources:Idioma.LabelPesoIdeal}" HorizontalAlignment="Left" Height="27" Margin="524,254,0,0" VerticalAlignment="Top" Width="68" Foreground="White"/>
+        <Button x:Name="btn_salvar" Content="{x:Static resources:Idioma.btn_salvar}" HorizontalAlignment="Left" Height="38" Margin="464,406,0,0" VerticalAlignment="Top" Width="138" Click="btn_salvar_Click" RenderTransformOrigin="-0.004,0.403" TabIndex="21" KeyDown="btn_salvar_KeyDown"/>
+        <TextBlock x:Name="txtBlockObservacoes" HorizontalAlignment="Left" Height="78" Margin="10,391,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="331" Foreground="White" Background="White"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="17" Margin="10,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" IsEnabled="False"/>
+        <TextBox x:Name="txtIdAluno" HorizontalAlignment="Left" Height="17" Margin="88,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58" IsEnabled="False"/>
+        <TextBox x:Name="txtNomeAluno" HorizontalAlignment="Left" Height="17" Margin="312,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsEnabled="False"/>
+        <TextBox x:Name="txtPeso" HorizontalAlignment="Left" Height="17" Margin="10,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="2" GotFocus="txtPeso_GotFocus" LostFocus="txtPeso_LostFocus"/>
+        <TextBox x:Name="txtAltura" HorizontalAlignment="Left" Height="17" Margin="108,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="3" GotFocus="txtAltura_GotFocus" LostFocus="txtAltura_LostFocus"/>
+        <TextBox x:Name="txtTorax" HorizontalAlignment="Left" Height="17" Margin="10,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="4" GotFocus="txtTorax_GotFocus" LostFocus="txtTorax_LostFocus"/>
+        <TextBox x:Name="txtAntebracoDir" HorizontalAlignment="Left" Height="17" Margin="10,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="9" GotFocus="txtAntebracoDir_GotFocus" LostFocus="txtAntebracoDir_LostFocus"/>
+        <TextBox x:Name="txtCintura" HorizontalAlignment="Left" Height="17" Margin="122,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="5" GotFocus="txtCintura_GotFocus" LostFocus="txtCintura_LostFocus"/>
+        <TextBox x:Name="txtAntebracoEsq" HorizontalAlignment="Left" Height="17" Margin="122,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="10" GotFocus="txtAntebracoEsq_GotFocus" LostFocus="txtAntebracoEsq_LostFocus"/>
+        <TextBox x:Name="txtBicepsDir" HorizontalAlignment="Left" Height="17" Margin="232,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="11" GotFocus="txtBicepsDir_GotFocus" LostFocus="txtBicepsDir_LostFocus"/>
+        <TextBox x:Name="txtQuadril" HorizontalAlignment="Left" Height="17" Margin="232,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="6" GotFocus="txtQuadril_GotFocus" LostFocus="txtQuadril_LostFocus"/>
+        <TextBox x:Name="txtBicepsEsq" HorizontalAlignment="Left" Height="17" Margin="315,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="12" GotFocus="txtBicepsEsq_GotFocus" LostFocus="txtBicepsEsq_LostFocus"/>
+        <TextBox x:Name="txtCoxaDir" HorizontalAlignment="Left" Height="17" Margin="10,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="15" GotFocus="txtCoxaDir_GotFocus" LostFocus="txtCoxaDir_LostFocus"/>
+        <TextBox x:Name="txtCoxaEsq" HorizontalAlignment="Left" Height="17" Margin="122,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="16" GotFocus="txtCoxaEsq_GotFocus" LostFocus="txtCoxaEsq_LostFocus"/>
+        <TextBox x:Name="txtPanturrilhaDir" HorizontalAlignment="Left" Height="17" Margin="234,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="17" GotFocus="txtPanturrilhaDir_GotFocus" LostFocus="txtPanturrilhaDir_LostFocus"/>
+        <TextBox x:Name="txtPanturrilaEsq" HorizontalAlignment="Left" Height="17" Margin="360,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108" TabIndex="19" GotFocus="txtPanturrilaEsq_GotFocus" LostFocus="txtPanturrilaEsq_LostFocus"/>
+        <TextBox x:Name="txtImc" HorizontalAlignment="Left" Height="17" Margin="411,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" TabIndex="13" GotFocus="txtImc_GotFocus" LostFocus="txtImc_LostFocus"/>
+        <TextBox x:Name="txtPesoIdeal" HorizontalAlignment="Left" Height="17" Margin="524,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="14" GotFocus="txtPesoIdeal_GotFocus" LostFocus="txtPesoIdeal_LostFocus"/>
+        <TextBox x:Name="txtMassaMagra" HorizontalAlignment="Left" Height="17" Margin="417,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="7" GotFocus="txtMassaMagra_GotFocus" LostFocus="txtMassaMagra_LostFocus"/>
+        <TextBox x:Name="txtMassaGorda" HorizontalAlignment="Left" Height="17" Margin="524,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78" TabIndex="8" GotFocus="txtMassaGorda_GotFocus" LostFocus="txtMassaGorda_LostFocus"/>
+        <TextBox x:Name="txtPercentualGordura" HorizontalAlignment="Left" Height="17" Margin="504,337,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" TabIndex="20" GotFocus="txtPercentualGordura_GotFocus" LostFocus="txtPercentualGordura_LostFocus"/>
+        <Label x:Name="LabelObservacoes" Content="{x:Static resources:Idioma.LabelObservacoes}" HorizontalAlignment="Left" Height="24" Margin="10,366,0,0" VerticalAlignment="Top" Width="90" Foreground="White"/>
+
     </Grid>
 </Window>
