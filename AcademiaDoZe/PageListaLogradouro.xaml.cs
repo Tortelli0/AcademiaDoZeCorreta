@@ -23,4 +23,9 @@ public partial class PageListaLogradouro : Page
 	{
 		InitializeComponent();
 	}
+
+	private void ButtonNovo_OnClick(object sender, RoutedEventArgs e)
+	{
+
+    }
 }

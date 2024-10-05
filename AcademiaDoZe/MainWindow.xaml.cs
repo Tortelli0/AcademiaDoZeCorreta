@@ -116,7 +116,7 @@ public partial class MainWindow : Window
 		windowConfig.Show();
 	}
 
-	private void Home_btn_Click(object sender, RoutedEventArgs e)
+	public void Home_btn_Click(object sender, RoutedEventArgs e)
 	{
 		MainWindow mainWindow = new MainWindow();
 
