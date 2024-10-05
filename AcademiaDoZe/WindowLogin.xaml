@@ -15,7 +15,7 @@
 
         <Label x:Name="LabelCpf" Content="{x:Static resources:Idioma.LabelCpf}" HorizontalAlignment="Left" Height="29" Margin="32,10,0,0" VerticalAlignment="Top" Width="48" Foreground="White"/>
         <Label x:Name="LabelSenha" Content="{x:Static resources:Idioma.LabelSenha}" HorizontalAlignment="Left" Height="25" Margin="32,87,0,0" VerticalAlignment="Top" Width="100" Foreground="White"/>
-        <TextBox x:Name="txtSenha" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" GotFocus="txtSenha_GotFocus" LostFocus="txtSenha_LostFocus" Margin="0,116,0,0" TabIndex="1" KeyDown="txtSenha_KeyDown"/>
+        <TextBox x:Name="txtSenha" HorizontalAlignment="Center" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" GotFocus="txtSenha_GotFocus" LostFocus="txtSenha_LostFocus" Margin="0,116,0,0" TabIndex="1"/>
         <Button x:Name="btn_salvar" Content="{x:Static resources:Idioma.btn_salvar}" HorizontalAlignment="Center" Height="29" Margin="0,153,0,0" VerticalAlignment="Top" Width="163" Click="btn_salvar_Click" TabIndex="2" KeyDown="btn_salvar_KeyDown"/>
 
     </Grid>

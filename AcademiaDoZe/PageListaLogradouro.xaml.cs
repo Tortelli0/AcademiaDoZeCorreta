@@ -19,13 +19,22 @@ namespace AcademiaDoZe;
 /// </summary>
 public partial class PageListaLogradouro : Page
 {
-	public PageListaLogradouro()
+	// Atributos para conexão e persistência com o banco de dados
+	private string ConnectionString { get; set; }
+	private string ProviderName { get; set; }
+
+	public PageListaLogradouro(string connectionString, string providerName)
 	{
 		InitializeComponent();
+
+		ConnectionString = connectionString;
+		ProviderName = providerName;
 	}
 
 	private void ButtonNovo_OnClick(object sender, RoutedEventArgs e)
 	{
+		WindowLogradouro windowLogradouro = new WindowLogradouro(ConnectionString, ProviderName);
 
-    }
+		windowLogradouro.Show();
+	}
 }

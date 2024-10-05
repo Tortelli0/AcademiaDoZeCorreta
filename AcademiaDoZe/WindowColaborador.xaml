@@ -39,7 +39,7 @@
         <Label x:Name="LabelAdmissao" Content="{x:Static resources:Idioma.LabelAdmissao}" HorizontalAlignment="Left" Height="28" Margin="635,39,0,0" VerticalAlignment="Top" Width="88" Foreground="White"/>
         <Grid HorizontalAlignment="Left" Height="53" Margin="634,120,0,0" VerticalAlignment="Top" Width="140" Background="#FF1F1F1F"/>
         <RadioButton x:Name="RdbClt" Content="{x:Static resources:Idioma.RdbClt}" HorizontalAlignment="Left" Height="17" Margin="650,126,0,0" VerticalAlignment="Top" Width="108" Foreground="White" TabIndex="666666"/>
-        <RadioButton x:Name="RdbEstagio" Content="{x:Static resources:Idioma.RdbEstagio}" HorizontalAlignment="Left" Height="18" Margin="650,148,0,0" VerticalAlignment="Top" Width="108" Checked="RadioButton_Checked" Foreground="White" TabIndex="6666"/>
+        <RadioButton x:Name="RdbEstagio" Content="{x:Static resources:Idioma.RdbEstagio}" HorizontalAlignment="Left" Height="18" Margin="650,148,0,0" VerticalAlignment="Top" Width="108" Foreground="White" TabIndex="6666"/>
         <Grid HorizontalAlignment="Left" Height="80" Margin="634,194,0,0" VerticalAlignment="Top" Width="140" Background="#FF1F1F1F"/>
         <RadioButton x:Name="RdbAdministrador" Content="{x:Static resources:Idioma.RdbAdministrador}" HorizontalAlignment="Left" Height="17" Margin="650,205,0,0" VerticalAlignment="Top" Width="108" Foreground="White" TabIndex="6677"/>
         <RadioButton x:Name="RdbAtendente" Content="{x:Static resources:Idioma.RdbAtendente}" HorizontalAlignment="Left" Height="17" Margin="650,228,0,0" VerticalAlignment="Top" Width="108" Foreground="White" TabIndex="666666"/>

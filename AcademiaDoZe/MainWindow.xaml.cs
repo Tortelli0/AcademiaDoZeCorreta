@@ -55,9 +55,16 @@ public partial class MainWindow : Window
 
 	private void Logradouro_btn_Click(object sender, RoutedEventArgs e)
 	{
-		WindowLogradouro windowLogradouro = new WindowLogradouro(ConnectionString, ProviderName);
+		//WindowLogradouro windowLogradouro = new WindowLogradouro(ConnectionString, ProviderName);
 
-		windowLogradouro.Show();
+		//windowLogradouro.Show();
+
+		//Frame.Navigate(new PageListaLogradouro(ConnectionString, ProviderName));
+
+		if (Frame.Content is not PageListaLogradouro)
+		{
+			Frame.Content = new PageListaLogradouro(ConnectionString, ProviderName);
+		}
 	}
 
 	private void Aluno_btn_Click(object sender, RoutedEventArgs e)

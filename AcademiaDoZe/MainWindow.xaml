@@ -71,8 +71,11 @@
             </Button>
             <Button x:Name="ButtonConfig" Content="{x:Static resources:Idioma.Config}" HorizontalAlignment="Left" Height="29" Margin="2,504,0,0" VerticalAlignment="Top" Width="176" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ButtonConfig_Click" TabIndex="11"/>
         </Grid>
+
         <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,606,0,0" Width="800" Background="White"/>
-        <DockPanel LastChildFill="False"/>
+        <DockPanel LastChildFill="True" Margin="177,16,0,15">
+            <Frame x:Name="Frame" Content="Frame" Width="622" Height="586"/>
+        </DockPanel>
 
     </Grid>
 </Window>
