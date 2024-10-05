@@ -74,7 +74,7 @@
 
         <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,606,0,0" Width="800" Background="White"/>
         <DockPanel LastChildFill="True" Margin="177,16,0,15">
-            <Frame x:Name="Frame" Content="Frame" Width="622" Height="586"/>
+            <Frame x:Name="Frame" Content="" Width="622" Height="586"/>
         </DockPanel>
 
     </Grid>
