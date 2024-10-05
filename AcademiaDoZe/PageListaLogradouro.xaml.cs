@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademiaDoZe.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,30 @@ public partial class PageListaLogradouro : Page
 	private string ConnectionString { get; set; }
 	private string ProviderName { get; set; }
 
+	// declaração ViewModel
+	private LogradouroViewModel ViewModelLogradouro;
+
 	public PageListaLogradouro(string connectionString, string providerName)
 	{
 		InitializeComponent();
 
 		ConnectionString = connectionString;
 		ProviderName = providerName;
+
+		try
+		{
+			// criação de objeto ViewModel
+			ViewModelLogradouro = new LogradouroViewModel(ProviderName, ConnectionString);
+			// carrega os dados
+			ViewModelLogradouro.Load();
+			// associa o objeto da ViewModel ao DataContext da janela
+			// DataContext é uma propriedade que permite que elementos de interface gráfica sejam associados a objetos de dados
+			DataContext = ViewModelLogradouro;
+		}
+		catch
+		{
+			MessageBox.Show("Erro ao carregar a lista de logradouros!");
+		}
 	}
 
 	private void ButtonNovo_OnClick(object sender, RoutedEventArgs e)
