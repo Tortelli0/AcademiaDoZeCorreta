@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:AcademiaDoZe"
         xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="637" Width="800" Closing="Window_Closing" KeyDown="Window_KeyDown">
+        Title="MainWindow" Height="702" Width="872" Closing="Window_Closing" KeyDown="Window_KeyDown">
 
     <Grid Background="#FF2F2C2C">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid HorizontalAlignment="Left" Height="590" VerticalAlignment="Center" Width="177" Background="Black">
-            <DockPanel Height="15" LastChildFill="False" VerticalAlignment="Top" Background="White" Margin="0,-15,-623,0"/>
+        <Grid HorizontalAlignment="Left" Height="646" VerticalAlignment="Center" Width="177" Background="Black">
+            <DockPanel Height="13" LastChildFill="False" VerticalAlignment="Top" Background="White" Margin="0,-20,-698,0"/>
             <Button x:Name="Home_btn" Content="Home" HorizontalAlignment="Left" Height="23" Margin="2,10,0,0" VerticalAlignment="Top" Width="176" RenderTransformOrigin="0.709,1.275" Foreground="White" BorderBrush="Black" Click="Home_btn_Click" TabIndex="0">
                 <Button.Background>
                     <ImageBrush/>
@@ -72,9 +72,9 @@
             <Button x:Name="ButtonConfig" Content="{x:Static resources:Idioma.Config}" HorizontalAlignment="Left" Height="29" Margin="2,504,0,0" VerticalAlignment="Top" Width="176" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Click="ButtonConfig_Click" TabIndex="11"/>
         </Grid>
 
-        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,606,0,0" Width="800" Background="White"/>
+        <DockPanel HorizontalAlignment="Center" LastChildFill="False" Margin="0,671,0,0" Width="872" Background="White"/>
         <DockPanel LastChildFill="True" Margin="177,16,0,15">
-            <Frame x:Name="Frame" Content="" Width="622" Height="586"/>
+            <Frame x:Name="framePrincipal" Content="" Width="695" Height="653"/>
         </DockPanel>
 
     </Grid>

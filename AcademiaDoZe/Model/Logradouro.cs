@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AcademiaDoZe.Model;
-public class Logradouro
+public class Logradouro : ICloneable
 {
 	public int Id { get; set; }
 	public string Cep { get; set; }
@@ -23,5 +23,10 @@ public class Logradouro
 		Cidade = cidade;
 		Bairro = bairro;
 		Nome = nome;
+	}
+
+	public object Clone()
+	{
+		return this.MemberwiseClone();
 	}
 }

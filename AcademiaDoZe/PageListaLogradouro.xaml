@@ -4,34 +4,47 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AcademiaDoZe"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageListaLogradouro">
+      xmlns:viewModel="clr-namespace:AcademiaDoZe.ViewModel"      
+      mc:Ignorable="d"
+      Title="PageListaLogradouro" Width="620" Height="440">
 
-    <Grid>
+    <Page.DataContext>
+        <viewModel:LogradouroViewModel/>
+    </Page.DataContext>
+
+    <Grid Margin="0,-41,0,-142">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="280*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="303*"/>
         </Grid.RowDefinitions>
+        <GroupBox Header="" Margin="10,10,10,10" Grid.Row="0" >
+            <Grid Height="300">
+                <Label x:Name="labelAtiva" Content="Cadastrar Logradouro" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" BorderBrush="#FF4A1E1E" Foreground="White" FontSize="20"/>
+                <local:UserControlLogradouro Width="566" Margin="101,21,101,83" />
+            </Grid>
+        </GroupBox>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="212,0,0,0" Width="408">
+            <Button x:Name="buttonNovo" Margin="3" Padding="3" CommandParameter="{Binding}" 
+                    Command="{Binding LogradouroAdicionarCommand}" Content="Novo" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="buttonNovo" Margin="3" Padding="3" Content="Novo" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" Click="ButtonNovo_OnClick"/>
-            <Button x:Name="buttonEditar" Margin="3" Padding="3" Content="Editar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}"/>
-            <Button x:Name="buttonExcluir" Margin="3" Padding="3" Content="Deletar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}"/>
+            <Button x:Name="buttonEditar" Margin="3" Padding="3" CommandParameter="{Binding}" 
+                    Command="{Binding LogradouroAtualizarCommand}" Content="Editar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+            <Button x:Name="buttonExcluir" Margin="3" Padding="3" CommandParameter="{Binding}" 
+            Command="{Binding LogradouroRemoverCommand}" Content="Deletar" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="130" Height="30" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
         </StackPanel>
-
-        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+        <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
             <DataGrid ItemsSource="{Binding Logradouros}" SelectedItem="{Binding SelectedLogradouro}" AutoGenerateColumns="False" IsReadOnly="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding Id, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Cep" Binding="{Binding Cep, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="Uf" Binding="{Binding Uf, UpdateSourceTrigger=PropertyChanged}"/>
-                    <DataGridTextColumn Header="País" Binding="{Binding Pais, UpdateSourceTrigger=PropertyChanged}"/>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Cep" Binding="{Binding Cep}"/>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Header="Bairro" Binding="{Binding Bairro}"/>
+                    <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}"/>
+                    <DataGridTextColumn Header="UF" Binding="{Binding Uf}"/>
+                    <DataGridTextColumn Header="Pais" Binding="{Binding Pais}"/>
                 </DataGrid.Columns>
-
             </DataGrid>
         </ScrollViewer>
     </Grid>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AcademiaDoZe.DataAcess;
+using AcademiaDoZe.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -6,41 +8,170 @@ using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace AcademiaDoZe.ViewModel;
 public class LogradouroViewModel
 {
-	// implementa a interface INotifyPropertyChanged
+	// Objetos utilizados no Databinding
+	// Recurso que permite a sincronização automática entre View e ViewModel,
+	// através da propriedade DataContext da View.
+	public ObservableCollection<Logradouro> Logradouros { get; set; }
+	private Logradouro _selectedLogradouro;
+	public Logradouro SelectedLogradouro
+	{
+		get { return _selectedLogradouro; }
+		set
+		{
+			_selectedLogradouro = value;
+			OnPropertyChanged("SelectedLogradouro");
+		}
+	}
+
+	// atributo para acessar o banco de dados
+	private LogradouroRepository _repository;
+
+	// Comandos para o CRUD
+	public ICommand LogradouroAdicionarCommand { get; set; }
+	public ICommand LogradouroAtualizarCommand { get; set; }
+	public ICommand LogradouroRemoverCommand { get; set; }
+
+
+	public LogradouroViewModel()
+	{
+		Logradouros = new ObservableCollection<Logradouro>();
+		_repository = new LogradouroRepository();
+
+		// Inicializando os comandos
+		LogradouroAdicionarCommand = new RelayCommand(AdicionarLogradouro);
+		LogradouroAtualizarCommand = new RelayCommand(AtualizarLogradouro);
+		LogradouroRemoverCommand = new RelayCommand(RemoverLogradouro);
+
+		GetAll();
+	}
+
+
+	public void GetAll()
+	{
+		// busca no banco de dados e carrega em Logradouros
+		Logradouros.Clear();
+		_repository.GetAll().ForEach(data => Logradouros.Add(data));
+	}
+
+	private void AdicionarLogradouro(object obj)
+	{
+		if (SelectedLogradouro == null) return;
+		if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+		{
+			try
+			{
+				_repository.Add(SelectedLogradouro);
+				MessageBox.Show("Sucesso.");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: " + ex.Message);
+			}
+			finally
+			{
+				GetAll();
+			}
+		}
+	}
+
+	private void AtualizarLogradouro(object obj)
+	{
+		if (SelectedLogradouro == null) return;
+		if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+		{
+			try
+			{
+				_repository.Update(SelectedLogradouro);
+
+				MessageBox.Show("Sucesso.");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: " + ex.Message);
+			}
+			finally
+			{
+				GetAll();
+			}
+		}
+	}
+
+	private void RemoverLogradouro(object obj)
+	{
+		if (SelectedLogradouro == null) return;
+		if (MessageBox.Show("Confirma?", "Logradouro", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+		{
+			try
+			{
+				_repository.Delete(SelectedLogradouro);
+
+				MessageBox.Show("Sucesso.");
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Error: " + ex.Message);
+			}
+			finally
+			{
+				GetAll();
+			}
+		}
+	}
+
+	/*----------------------------------------------------------------------------*/
+		//// implementa a interface INotifyPropertyChanged
 	public event PropertyChangedEventHandler PropertyChanged;
+
 	protected void OnPropertyChanged(string propertyName)
 	{
 		PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 	}
-	// utilizados no databinding
-	public ObservableCollection<Model.Logradouro> Logradouros { get; set; }
-	private Model.Logradouro _selectedLogradouro;
-	public Model.Logradouro SelectedLogradouro
-	{
-		get => _selectedLogradouro; set
-		{
-			_selectedLogradouro = value;
-			OnPropertyChanged(nameof(SelectedLogradouro));
-		}
-	}
+
+
+	//// utilizados no databinding
+	//public ObservableCollection<Model.Logradouro> Logradouros { get; set; }
+
+	//private Model.Logradouro _selectedLogradouro;
+
+	//public Model.Logradouro SelectedLogradouro
+	//{
+	//	get => _selectedLogradouro; set
+	//	{
+	//		_selectedLogradouro = value;
+	//		OnPropertyChanged(nameof(SelectedLogradouro));
+	//	}
+	//}
+
+
 	// Atributos para conexão e persistência com o banco de dados
 	private readonly DbProviderFactory factory;
 	private string ConnectionString { get; set; }
 	private string ProviderName { get; set; }
+
+
 	// Construtor
 	public LogradouroViewModel(string providerName, string connectionString)
 	{
 		ConnectionString = connectionString;
 		ProviderName = providerName;
+
 		// define a factory, ou seja, o provedor de dados - Mysql, SqlServer, etc
 		factory = DbProviderFactories.GetFactory(ProviderName);
+
 		// inicializa a lista de logradouros
 		Logradouros = new ObservableCollection<Model.Logradouro>();
 	}
+
+
 	// implementa os métodos de CRUD, utilizando DBProviderFactory
 	// método para carregar os dados aqui
 
@@ -69,126 +200,128 @@ public class LogradouroViewModel
 			});
 		}
 	}
+
 	// método para inserir os dados aqui
 
-	public void Add(Model.Logradouro dado)
-	{
-		using var conexao = factory.CreateConnection(); // Cria conexão
-		conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
-		using var comando = factory.CreateCommand(); // Cria comando
-		comando!.Connection = conexao; // Atribui conexão
+	//public void Add(Model.Logradouro dado)
+	//{
+	//	using var conexao = factory.CreateConnection(); // Cria conexão
+	//	conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
+	//	using var comando = factory.CreateCommand(); // Cria comando
+	//	comando!.Connection = conexao; // Atribui conexão
 
-		// Adiciona parâmetro (@campo e valor)
-		var cep = comando.CreateParameter();
-		cep.ParameterName = "@cep";
-		cep.Value = dado.Cep;
-		comando.Parameters.Add(cep);
+	//	// Adiciona parâmetro (@campo e valor)
+	//	var cep = comando.CreateParameter();
+	//	cep.ParameterName = "@cep";
+	//	cep.Value = dado.Cep;
+	//	comando.Parameters.Add(cep);
 
-		var pais = comando.CreateParameter();
-		pais.ParameterName = "@pais";
-		pais.Value = dado.Pais;
-		comando.Parameters.Add(pais);
+	//	var pais = comando.CreateParameter();
+	//	pais.ParameterName = "@pais";
+	//	pais.Value = dado.Pais;
+	//	comando.Parameters.Add(pais);
 
-		var uf = comando.CreateParameter();
-		uf.ParameterName = "@uf";
-		uf.Value = dado.Uf;
-		comando.Parameters.Add(uf);
+	//	var uf = comando.CreateParameter();
+	//	uf.ParameterName = "@uf";
+	//	uf.Value = dado.Uf;
+	//	comando.Parameters.Add(uf);
 
-		var cidade = comando.CreateParameter();
-		cidade.ParameterName = "@cidade";
-		cidade.Value = dado.Cidade;
-		comando.Parameters.Add(cidade);
+	//	var cidade = comando.CreateParameter();
+	//	cidade.ParameterName = "@cidade";
+	//	cidade.Value = dado.Cidade;
+	//	comando.Parameters.Add(cidade);
 
-		var bairro = comando.CreateParameter();
-		bairro.ParameterName = "@bairro";
-		bairro.Value = dado.Bairro;
-		comando.Parameters.Add(bairro);
+	//	var bairro = comando.CreateParameter();
+	//	bairro.ParameterName = "@bairro";
+	//	bairro.Value = dado.Bairro;
+	//	comando.Parameters.Add(bairro);
 
-		var logradouro = comando.CreateParameter();
-		logradouro.ParameterName = "@logradouro";
-		logradouro.Value = dado.Nome;
-		comando.Parameters.Add(logradouro);
+	//	var logradouro = comando.CreateParameter();
+	//	logradouro.ParameterName = "@logradouro";
+	//	logradouro.Value = dado.Nome;
+	//	comando.Parameters.Add(logradouro);
 
-		conexao.Open();
-		comando.CommandText = @"INSERT INTO tb_logradouro (cep, pais, uf, cidade, bairro, logradouro) VALUES (@cep, @pais, @uf, @cidade, @bairro, @logradouro);";
+	//	conexao.Open();
+	//	comando.CommandText = @"INSERT INTO tb_logradouro (cep, pais, uf, cidade, bairro, logradouro) VALUES (@cep, @pais, @uf, @cidade, @bairro, @logradouro);";
 
-		// Executa o script na conexão e armazena o número de linhas afetadas.
-		var linhas = comando.ExecuteNonQuery();
-	}
+	//	// Executa o script na conexão e armazena o número de linhas afetadas.
+	//	var linhas = comando.ExecuteNonQuery();
+	//}
+
 	// método para atualizar os dados aqui
 
-	public void Update(Model.Logradouro dado)
-	{
-		using var conexao = factory.CreateConnection(); // Cria conexão
-		conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
-		using var comando = factory.CreateCommand(); // Cria comando
-		comando!.Connection = conexao; // Atribui conexão
+	//public void Update(Model.Logradouro dado)
+	//{
+	//	using var conexao = factory.CreateConnection(); // Cria conexão
+	//	conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
+	//	using var comando = factory.CreateCommand(); // Cria comando
+	//	comando!.Connection = conexao; // Atribui conexão
 
-		// Adiciona parâmetro (@campo e valor)
-		var id = comando.CreateParameter();
-		id.ParameterName = "@id";
-		id.Value = dado.Id;
-		comando.Parameters.Add(id);
+	//	// Adiciona parâmetro (@campo e valor)
+	//	var id = comando.CreateParameter();
+	//	id.ParameterName = "@id";
+	//	id.Value = dado.Id;
+	//	comando.Parameters.Add(id);
 
-		var cep = comando.CreateParameter();
-		cep.ParameterName = "@cep";
-		cep.Value = dado.Cep;
-		comando.Parameters.Add(cep);
+	//	var cep = comando.CreateParameter();
+	//	cep.ParameterName = "@cep";
+	//	cep.Value = dado.Cep;
+	//	comando.Parameters.Add(cep);
 
-		var pais = comando.CreateParameter();
-		pais.ParameterName = "@pais";
-		pais.Value = dado.Pais;
-		comando.Parameters.Add(pais);
+	//	var pais = comando.CreateParameter();
+	//	pais.ParameterName = "@pais";
+	//	pais.Value = dado.Pais;
+	//	comando.Parameters.Add(pais);
 
-		var uf = comando.CreateParameter();
-		uf.ParameterName = "@uf";
-		uf.Value = dado.Uf;
-		comando.Parameters.Add(uf);
+	//	var uf = comando.CreateParameter();
+	//	uf.ParameterName = "@uf";
+	//	uf.Value = dado.Uf;
+	//	comando.Parameters.Add(uf);
 
-		var cidade = comando.CreateParameter();
-		cidade.ParameterName = "@cidade";
-		cidade.Value = dado.Cidade;
-		comando.Parameters.Add(cidade);
+	//	var cidade = comando.CreateParameter();
+	//	cidade.ParameterName = "@cidade";
+	//	cidade.Value = dado.Cidade;
+	//	comando.Parameters.Add(cidade);
 
-		var bairro = comando.CreateParameter();
-		bairro.ParameterName = "@bairro";
-		bairro.Value = dado.Bairro;
-		comando.Parameters.Add(bairro);
+	//	var bairro = comando.CreateParameter();
+	//	bairro.ParameterName = "@bairro";
+	//	bairro.Value = dado.Bairro;
+	//	comando.Parameters.Add(bairro);
 
-		var logradouro = comando.CreateParameter();
-		logradouro.ParameterName = "@logradouro";
-		logradouro.Value = dado.Nome;
-		comando.Parameters.Add(logradouro);
+	//	var logradouro = comando.CreateParameter();
+	//	logradouro.ParameterName = "@logradouro";
+	//	logradouro.Value = dado.Nome;
+	//	comando.Parameters.Add(logradouro);
 
-		conexao.Open();
-		comando.CommandText = @"UPDATE tb_logradouro SET cep = @cep, pais = @pais, uf = @uf, cidade = @cidade, bairro = @bairro, logradouro = @logradouro WHERE id_logradouro = @id;";
+	//	conexao.Open();
+	//	comando.CommandText = @"UPDATE tb_logradouro SET cep = @cep, pais = @pais, uf = @uf, cidade = @cidade, bairro = @bairro, logradouro = @logradouro WHERE id_logradouro = @id;";
 
-		// Executa o comando no banco de dados
-		_ = comando.ExecuteNonQuery();
-	}
+	//	// Executa o comando no banco de dados
+	//	_ = comando.ExecuteNonQuery();
+	//}
 
 	// método para deletar os dados aqui
 
 
-	public void Delete(Model.Logradouro dado)
-	{
-		using var conexao = factory.CreateConnection(); //Cria conexão
-		conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-		using var comando = factory.CreateCommand(); // Cria comando
-		comando!.Connection = conexao; // Atribui Conexao
+	//public void Delete(Model.Logradouro dado)
+	//{
+	//	using var conexao = factory.CreateConnection(); //Cria conexão
+	//	conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
+	//	using var comando = factory.CreateCommand(); // Cria comando
+	//	comando!.Connection = conexao; // Atribui Conexao
 
-		// Adiciona parâmetro (@campo e valor)
-		var id = comando.CreateParameter();
-		id.ParameterName = "@id";
-		id.Value = dado.Id;
-		comando.Parameters.Add(id);
+	//	// Adiciona parâmetro (@campo e valor)
+	//	var id = comando.CreateParameter();
+	//	id.ParameterName = "@id";
+	//	id.Value = dado.Id;
+	//	comando.Parameters.Add(id);
 
-		conexao.Open();
+	//	conexao.Open();
 
-		//realiza o DELETE
-		comando.CommandText = @"DELETE FROM tb_logradouro WHERE id_logradouro = @id;";
+	//	//realiza o DELETE
+	//	comando.CommandText = @"DELETE FROM tb_logradouro WHERE id_logradouro = @id;";
 
-		//executa o comando no banco de dados
-		_ = comando.ExecuteNonQuery();
-	}
+	//	//executa o comando no banco de dados
+	//	_ = comando.ExecuteNonQuery();
+	//}
 }
