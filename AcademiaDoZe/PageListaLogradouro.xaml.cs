@@ -27,19 +27,16 @@ public partial class PageListaLogradouro : Page
 	// declaração ViewModel
 	private LogradouroViewModel ViewModelLogradouro;
 
-	public PageListaLogradouro(string connectionString, string providerName)
+	public PageListaLogradouro()
 	{
 		InitializeComponent();
-
-		ConnectionString = connectionString;
-		ProviderName = providerName;
 
 		try
 		{
 			// criação de objeto ViewModel
-			ViewModelLogradouro = new LogradouroViewModel(ProviderName, ConnectionString);
+			ViewModelLogradouro = new LogradouroViewModel();
 			// carrega os dados
-			ViewModelLogradouro.Load();
+			ViewModelLogradouro.GetAll(); //Load();
 			// associa o objeto da ViewModel ao DataContext da janela
 			// DataContext é uma propriedade que permite que elementos de interface gráfica sejam associados a objetos de dados
 			DataContext = ViewModelLogradouro;
@@ -48,12 +45,5 @@ public partial class PageListaLogradouro : Page
 		{
 			MessageBox.Show("Erro ao carregar a lista de logradouros!");
 		}
-	}
-
-	private void ButtonNovo_OnClick(object sender, RoutedEventArgs e)
-	{
-		WindowLogradouro windowLogradouro = new WindowLogradouro(ConnectionString, ProviderName);
-
-		windowLogradouro.Show();
 	}
 }

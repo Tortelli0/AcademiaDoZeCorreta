@@ -61,21 +61,30 @@ namespace AcademiaDoZe.DataAcess
 			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
 			using var comando = factory.CreateCommand(); //Cria comando
 			comando!.Connection = conexao; //Atribui conexão
+
 			//Adiciona parâmetro (@campo e valor)
 			var cep = comando.CreateParameter(); cep.ParameterName = "@cep";
 			cep.Value = dado.Cep; comando.Parameters.Add(cep);
+
 			var pais = comando.CreateParameter(); pais.ParameterName = "@pais";
 			pais.Value = dado.Pais; comando.Parameters.Add(pais);
+
 			var uf = comando.CreateParameter(); uf.ParameterName = "@uf";
 			uf.Value = dado.Uf; comando.Parameters.Add(uf);
+
 			var cidade = comando.CreateParameter(); cidade.ParameterName = "@cidade";
 			cidade.Value = dado.Cidade; comando.Parameters.Add(cidade);
+
 			var bairro = comando.CreateParameter(); bairro.ParameterName = "@bairro";
 			bairro.Value = dado.Bairro; comando.Parameters.Add(bairro);
+
 			var logradouro = comando.CreateParameter(); logradouro.ParameterName = "@logradouro";
 			logradouro.Value = dado.Nome; comando.Parameters.Add(logradouro);
+
 			conexao.Open();
+
 			comando.CommandText = @"INSERT INTO tb_logradouro (cep, pais, uf, cidade, bairro, logradouro) VALUES (@cep, @pais, @uf, @cidade, @bairro, @logradouro);";
+
 			//Executa o script na conexão e armazena o número de linhas afetadas.
 			var linhas = comando.ExecuteNonQuery();
 		}
@@ -87,25 +96,36 @@ namespace AcademiaDoZe.DataAcess
 			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
 			using var comando = factory.CreateCommand(); //Cria comando
 			comando!.Connection = conexao; //Atribui conexão
+
 			//Adiciona parâmetro (@campo e valor)
 			var id = comando.CreateParameter(); id.ParameterName = "@id";
 			id.Value = dado.Id; comando.Parameters.Add(id);
+
 			var cep = comando.CreateParameter(); cep.ParameterName = "@cep";
 			cep.Value = dado.Cep; comando.Parameters.Add(cep);
+
 			var pais = comando.CreateParameter(); pais.ParameterName = "@pais";
 			pais.Value = dado.Pais; comando.Parameters.Add(pais);
+
 			var uf = comando.CreateParameter(); uf.ParameterName = "@uf";
 			uf.Value = dado.Uf; comando.Parameters.Add(uf);
+
 			var cidade = comando.CreateParameter(); cidade.ParameterName = "@cidade";
 			cidade.Value = dado.Cidade; comando.Parameters.Add(cidade);
+
 			var bairro = comando.CreateParameter(); bairro.ParameterName = "@bairro";
 			bairro.Value = dado.Bairro; comando.Parameters.Add(bairro);
+
 			var logradouro = comando.CreateParameter(); logradouro.ParameterName = "@logradouro";
 			logradouro.Value = dado.Nome; comando.Parameters.Add(logradouro);
+
 			conexao.Open();
+
 			//realiza o UPDATE
 			comando.CommandText = @"UPDATE tb_logradouro SET cep = @cep, pais = @pais, uf = @uf, cidade = @cidade, bairro = @bairro, logradouro = @logradouro WHERE id_logradouro = @id;";
+
 			//executa o comando no banco de dados _ = comando.ExecuteNonQuery();
+			_ = comando.ExecuteNonQuery();
 		}
 
 		// método para deletar os dados aqui
@@ -115,15 +135,20 @@ namespace AcademiaDoZe.DataAcess
 			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
 			using var comando = factory.CreateCommand(); //Cria comando
 			comando!.Connection = conexao; //Atribui conexão
+
 			//Adiciona parâmetro (@campo e valor)
 			var id = comando.CreateParameter();
 			id.ParameterName = "@id";
 			id.Value = dado.Id;
 			comando.Parameters.Add(id);
+
 			conexao.Open();
+
 			//realiza o DELETE
 			comando.CommandText = @"DELETE FROM tb_logradouro WHERE id_logradouro = @id;";
+
 			//executa o comando no banco de dados _ = comando.ExecuteNonQuery();
+			_= comando.ExecuteNonQuery();
 		}
 	}
 }

@@ -63,7 +63,7 @@ public partial class MainWindow : Window
 
 		if (framePrincipal.Content is not PageListaLogradouro)
 		{
-			framePrincipal.Content = new PageListaLogradouro(ConnectionString, ProviderName);
+			framePrincipal.Content = new PageListaLogradouro();
 		}
 	}
 

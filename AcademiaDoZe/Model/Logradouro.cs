@@ -14,16 +14,6 @@ public class Logradouro : ICloneable
 	public string Cidade { get; set; }
 	public string Bairro { get; set; }
 	public string Nome { get; set; }
-	public Logradouro(int id = 0, string cep = "", string pais = "", string uf = "", string cidade = "", string bairro = "", string nome = "")
-	{
-		Id = id;
-		Cep = cep;
-		Pais = pais;
-		Uf = uf;
-		Cidade = cidade;
-		Bairro = bairro;
-		Nome = nome;
-	}
 
 	public object Clone()
 	{
