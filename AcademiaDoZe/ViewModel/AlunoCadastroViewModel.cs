@@ -25,6 +25,7 @@ public class AlunoCadastroViewModel : LogradouroViewModel
 	{
 		_aluno = aluno ?? new Aluno();
 		SalvarAlunoCommand = new RelayCommand(SalvarAluno);
+
 		// selecionar o logradouro conforme o LogradouroId
 		SelectedLogradouro = Logradouros.FirstOrDefault(l => l.Id == _aluno.LogradouroId);
 	}

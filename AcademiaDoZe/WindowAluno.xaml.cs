@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademiaDoZe.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,8 +26,9 @@ public partial class WindowAluno : Window
 	{
 		InitializeComponent();
 
-		this.Loaded += Page_Loaded;
+		DataContext = new AlunoCadastroViewModel();
 
+		this.Loaded += Page_Loaded;
 
 		this.ConnectionString = connectionString;
 		this.ProviderName = providerName;
@@ -372,5 +374,10 @@ public partial class WindowAluno : Window
 		{
 			this.Close();
 		}
+	}
+
+	private void txtCep_GotFocus(object sender, RoutedEventArgs e)
+	{
+
 	}
 }
