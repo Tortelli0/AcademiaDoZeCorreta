@@ -7,38 +7,28 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:resources="clr-namespace:AcademiaDoZe.Properties"
         mc:Ignorable="d"
-        Title="WindowAluno" Height="539" Width="497" Closing="Window_Closing" KeyDown="Window_KeyDown">
-
-    <Grid Background="Black">
-
-        <Label x:Name="LabelNascimento" Content="{x:Static resources:Idioma.LabelNascimento}" HorizontalAlignment="Left" Height="24" Margin="10,115,0,0" VerticalAlignment="Top" Width="86" Foreground="White"/>
-        <xctk:MaskedTextBox x:Name="DataNascimentoAluno" Mask="00/00/0000" Margin="16,139,349,338" GotFocus="DataNascimentoAluno_GotFocus" Text="{Binding Nascimento}" LostFocus="DataNascimentoAluno_LostFocus" TabIndex="3" />
-
-        <Label x:Name="LabelTelefone" Content="{x:Static resources:Idioma.LabelTelefone}" HorizontalAlignment="Left" Height="28" Margin="324,10,0,0" VerticalAlignment="Top" Width="74" Foreground="White"/>
-        <xctk:MaskedTextBox x:Name="txtTelefone" Mask="(000) 0000-0000" Margin="324,36,17,441" GotFocus="txtTelefone_GotFocus_1" Text="{Binding Telefone}" LostFocus="txtTelefone_LostFocus_1" TabIndex="1" />
-
-        <Label x:Name="LabelCpf" Content="{x:Static resources:Idioma.LabelCpf}" HorizontalAlignment="Left" Height="28" Margin="140,10,0,0" VerticalAlignment="Top" Width="73" Foreground="White"/>
-        <xctk:MaskedTextBox x:Name="txtCpf" Mask="000\.000\.000\-00" Margin="140,36,236,441" GotFocus="txtCpf_GotFocus_1" Text="{Binding Cpf}" LostFocus="txtCpf_LostFocus_1" TabIndex="0" />
-
-        <Label x:Name="LabelId" Content="{x:Static resources:Idioma.LabelId}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="106" Background="Transparent" Foreground="White"/>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="11,36,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="68" RenderTransformOrigin="0.625,0.326" Height="20" IsEnabled="False"/>
-
-        <Label x:Name="LabelNome" Content="{x:Static resources:Idioma.LabelNome}" HorizontalAlignment="Left" Height="24" Margin="11,71,0,0" VerticalAlignment="Top" Width="73" Foreground="White"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Margin="12,95,0,0" TextWrapping="Wrap" Text="{Binding Nome}" VerticalAlignment="Top" Width="441" RenderTransformOrigin="0.625,0.326" Height="20" TabIndex="2" GotFocus="txtNome_GotFocus" LostFocus="txtNome_LostFocus"/>
-
-        <Label x:Name="LabelEmail" Content="{x:Static resources:Idioma.LabelEmail}" HorizontalAlignment="Left" Height="26" Margin="169,115,0,0" VerticalAlignment="Top" Width="103" Foreground="White"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Margin="169,141,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="282" RenderTransformOrigin="0.625,0.326" Height="20" TabIndex="4" GotFocus="txtEmail_GotFocus" LostFocus="txtEmail_LostFocus"/>
-
-        <Label x:Name="LabelNumero" Content="{x:Static resources:Idioma.LabelNumero}" HorizontalAlignment="Left" Height="29" Margin="10,404,0,0" VerticalAlignment="Top" Width="73" Foreground="White"/>
-        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="10,433,0,0" TextWrapping="Wrap" Text="{Binding Numero}" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.625,0.326" Height="20" TabIndex="11" GotFocus="txtNumero_GotFocus" LostFocus="txtNumero_LostFocus"/>
-        
-        <Label x:Name="LabelComplemento" Content="{x:Static resources:Idioma.LabelComplemento}" HorizontalAlignment="Left" Height="31" Margin="145,402,0,0" VerticalAlignment="Top" Width="98" Foreground="White"/>
-        <TextBox x:Name="txtComplemento" HorizontalAlignment="Left" Margin="145,433,0,0" TextWrapping="Wrap" Text="{Binding Complemento}" VerticalAlignment="Top" Width="182" RenderTransformOrigin="0.625,0.326" Height="20" TabIndex="12" GotFocus="txtComplemento_GotFocus" LostFocus="txtComplemento_LostFocus"/>
-
-        <local:UserControlLogradouro x:Name="userControlLogradouro" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="211" IsEnabled="True" Width="568"/>
-
-        <Button Content="{x:Static resources:Idioma.btn_salvar}" IsDefault="True" Command="{Binding SalvarAlunoCommand}" HorizontalAlignment="Left" Margin="334,479,0,0" VerticalAlignment="Top" FontSize="15" Width="150" Height="35"/>
-        <Button Content="Cancelar" IsCancel="True" HorizontalAlignment="Left" Margin="169,479,0,0" VerticalAlignment="Top" FontSize="15" Width="150" Height="35"/>
+        Title="WindowAluno" Height="580" Width="610" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Margin="10" Background="#FF171717">
+        <Label x:Name="labelAtiva" Content="Cadastrar Aluno" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" BorderBrush="#FF4A1E1E" Foreground="White" FontSize="20"/>
+        <Label Content="ID:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="70" IsEnabled="False"/>
+        <Label Content="CPF:" HorizontalAlignment="Left" Margin="113,48,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxCpf" HorizontalAlignment="Left" Margin="106,74,0,0" TextWrapping="Wrap" Text="{Binding Cpf}" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Telefone:" HorizontalAlignment="Left" Margin="256,43,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxTelefone" HorizontalAlignment="Left" Margin="256,74,0,0" TextWrapping="Wrap" Text="{Binding Telefone}" VerticalAlignment="Top" Width="182"/>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textoBoxNome" HorizontalAlignment="Left" Margin="10,123,0,0" TextWrapping="Wrap" Text="{Binding Nome}" VerticalAlignment="Top" Width="568"/>
+        <Label Content="Nascimento:" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <DatePickerTextBox x:Name="textBoxNascimento" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Text="{Binding Nascimento}" Width="150"/>
+        <Label Content="E-mail:" HorizontalAlignment="Left" Margin="172,146,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textoBoxEmail" HorizontalAlignment="Left" Margin="172,177,0,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="406"/>
+        <local:UserControlLogradouro x:Name="userControlLogradouro" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Height="203" IsEnabled="True"/>
+        <Label Content="Número:" HorizontalAlignment="Left" Margin="10,414,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxNumero" HorizontalAlignment="Left" Margin="10,445,0,0" TextWrapping="Wrap" Text="{Binding Numero}" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Complemento:" HorizontalAlignment="Left" Margin="172,414,0,0" VerticalAlignment="Top" Foreground="#FFC4C4C4"/>
+        <TextBox x:Name="textBoxComplemento" HorizontalAlignment="Left" Margin="172,445,0,0" TextWrapping="Wrap" Text="{Binding Complemento}" VerticalAlignment="Top" Width="182"/>
+        <Button Content="Salvar" IsDefault="True" Command="{Binding SalvarAlunoCommand}" HorizontalAlignment="Left" Margin="400,500,0,0" VerticalAlignment="Top" FontSize="15" Width="150" Height="35"/>
+        <Button Content="Cancelar" IsCancel="True" HorizontalAlignment="Left" Margin="235,500,0,0" VerticalAlignment="Top" FontSize="15" Width="150" Height="35"/>
     </Grid>
 
 </Window>

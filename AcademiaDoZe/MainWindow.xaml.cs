@@ -69,16 +69,26 @@ public partial class MainWindow : Window
 
 	private void Aluno_btn_Click(object sender, RoutedEventArgs e)
 	{
-		WindowAluno windowAluno = new WindowAluno(ConnectionString, ProviderName);
+		//WindowAluno windowAluno = new WindowAluno();
 
-		windowAluno.Show();
+		//windowAluno.Show();
+
+		if (framePrincipal.Content is not PageListaAluno)
+		{
+			framePrincipal.Content = new PageListaAluno();
+		}
 	}
 
 	private void Colaborador_btn_Click(object sender, RoutedEventArgs e)
 	{
-		WindowColaborador windowColaborador = new WindowColaborador(ConnectionString, ProviderName);
+		//WindowColaborador windowColaborador = new WindowColaborador();
 
-		windowColaborador.Show();
+		//windowColaborador.Show();
+
+		if (framePrincipal.Content is not PageListaColaborador)
+		{
+			framePrincipal.Content = new PageListaColaborador();
+		}
 	}
 
 	private void Senha_btn_Click(object sender, RoutedEventArgs e)

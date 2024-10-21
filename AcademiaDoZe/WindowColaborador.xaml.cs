@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademiaDoZe.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,17 +19,19 @@ namespace AcademiaDoZe;
 /// </summary>
 public partial class WindowColaborador : Window
 {
-	private string ConnectionString { get; set; }
-	private string ProviderName { get; set; }
+	//private string ConnectionString { get; set; }
+	//private string ProviderName { get; set; }
 
-	public WindowColaborador(string connectionString, string providerName)
+	public WindowColaborador()
 	{
 		InitializeComponent();
 
+		DataContext = new ColaboradorCadastroViewModel();
+
 		this.Loaded += Page_Loaded;
 
-		this.ConnectionString = connectionString;
-		this.ProviderName = providerName;
+		//this.ConnectionString = connectionString;
+		//this.ProviderName = providerName;
 	}
 
 	private void Page_Loaded(object sender, RoutedEventArgs e)

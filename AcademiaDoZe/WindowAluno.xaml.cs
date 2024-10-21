@@ -19,10 +19,10 @@ namespace AcademiaDoZe;
 /// </summary>
 public partial class WindowAluno : Window
 {
-	private string ConnectionString { get; set; }
-	private string ProviderName { get; set; }
+	//private string ConnectionString { get; set; }
+	//private string ProviderName { get; set; }
 
-	public WindowAluno(string connectionString, string providerName)
+	public WindowAluno()
 	{
 		InitializeComponent();
 
@@ -30,8 +30,8 @@ public partial class WindowAluno : Window
 
 		this.Loaded += Page_Loaded;
 
-		this.ConnectionString = connectionString;
-		this.ProviderName = providerName;
+		//this.ConnectionString = connectionString;
+		//this.ProviderName = providerName;
 	}
 
 	private void Page_Loaded(object sender, RoutedEventArgs e)
