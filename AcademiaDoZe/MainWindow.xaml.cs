@@ -1,18 +1,10 @@
-﻿using AcademiaDoZe.Model;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Globalization;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
+
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
@@ -20,12 +12,12 @@ public partial class MainWindow : Window
 {
 	// Atributos para conexão e persistência com o banco de dados
 	private string ConnectionString { get; set; }
+
 	private string ProviderName { get; set; }
 
 	public MainWindow()
 	{
 		InitializeComponent();
-
 
 		WindowStartupLocation = WindowStartupLocation.CenterScreen;
 
@@ -114,9 +106,14 @@ public partial class MainWindow : Window
 
 	private void Matricula_btn_Click(object sender, RoutedEventArgs e)
 	{
-		WindowMatricula windowMatricula = new WindowMatricula(ConnectionString, ProviderName);
+		//WindowMatricula windowMatricula = new WindowMatricula();
 
-		windowMatricula.Show();
+		//windowMatricula.Show();
+
+		if (framePrincipal.Content is not PageListaMatricula)
+		{
+			framePrincipal.Content = new PageListaMatricula();
+		}
 	}
 
 	private void Login_btn_Click(object sender, RoutedEventArgs e)

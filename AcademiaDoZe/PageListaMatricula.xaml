@@ -1,0 +1,41 @@
+﻿<Page x:Class="AcademiaDoZe.PageListaMatricula"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:viewmodel="clr-namespace:AcademiaDoZe.ViewModel"
+      d:DataContext="{d:DesignInstance Type=viewmodel:MatriculaViewModel}"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageListaMatricula">
+
+    <Grid Height="590">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,23,16,511" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleX="-0.161" />
+                    <RotateTransform />
+                    <TranslateTransform X="-0.497" />
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Button Content="Novo" Command="{Binding AdicionarCommand}" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="120" Height="50" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Button Content="Editar" Command="{Binding AtualizarCommand}" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="120" Height="50" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="{Binding SelectedMatricula}" />
+            <Button Content="Deletar" Command="{Binding RemoverCommand}" Background="#FF1A1A1A" Foreground="#FFFDFDFD" Width="120" Height="50" FontWeight="Bold" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="{Binding SelectedMatricula}" />
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding Matriculas}" SelectedItem="{Binding SelectedMatricula}" AutoGenerateColumns="False" Height="497" VerticalAlignment="Top" Margin="0,93,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50" />
+                <DataGridTextColumn Header="Aluno ID" Binding="{Binding IdAluno}" Width="100" />
+                <DataGridTextColumn Header="Colaborador ID" Binding="{Binding IdColaborador}" Width="100" />
+                <DataGridTextColumn Header="Plano" Binding="{Binding Plano}" Width="80" />
+                <DataGridTextColumn Header="Data Início" Binding="{Binding DataInicio, StringFormat=\{0:dd/MM/yyyy\}}" Width="120" />
+                <DataGridTextColumn Header="Data Fim" Binding="{Binding DataFim, StringFormat=\{0:dd/MM/yyyy\}}" Width="120" />
+                <DataGridTextColumn Header="Restrição Médica" Binding="{Binding RestricaoMedica}" Width="150" />
+                <DataGridTextColumn Header="Objetivo" Binding="{Binding Objetivo}" Width="150" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

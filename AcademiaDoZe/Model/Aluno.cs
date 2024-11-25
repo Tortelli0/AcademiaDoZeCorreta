@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AcademiaDoZe.Model;
+
 public class Aluno
 {
 	public int Id { get; set; }
@@ -17,6 +18,8 @@ public class Aluno
 	public string Numero { get; set; }
 	public string Complemento { get; set; }
 	public string Senha { get; set; }
+	public byte[] Foto { get; set; }
+
 	public Aluno()
 	{
 		Nascimento = DateTime.Now;

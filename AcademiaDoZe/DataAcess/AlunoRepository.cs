@@ -1,11 +1,8 @@
 ﻿using AcademiaDoZe.Model;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.Common;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AcademiaDoZe.DataAcess;
 
@@ -25,7 +22,6 @@ public class AlunoRepository
 	}
 
 	// implementa os métodos de CRUD, utilizando DBProviderFactory
-
 
 	// método para carregar os dados aqui
 
@@ -88,7 +84,6 @@ public class AlunoRepository
 
 		//Executa o script na conexão e armazena o número de linhas afetadas.
 		var linhas = comando.ExecuteNonQuery();
-
 	}
 
 	// método para atualizar os dados aqui
@@ -144,7 +139,35 @@ public class AlunoRepository
 
 		//executa o comando no banco de dados
 		_ = comando.ExecuteNonQuery();
-
 	}
 
+	public Aluno BuscarAlunoPorCpf(string cpf)
+	{
+		using var conexao = factory.CreateConnection(); // Cria conexão
+		conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
+		conexao.Open();
+
+		var query = "SELECT * FROM tb_aluno WHERE cpf = @cpf"; // Certifique-se de que sua tabela está correta
+		using var comando = factory.CreateCommand(); // Cria comando
+		comando!.Connection = conexao; // Atribui conexão
+		comando.CommandText = query; // Atribui a consulta
+
+		// Adiciona o parâmetro
+		var paramCpf = comando.CreateParameter();
+		paramCpf.ParameterName = "@cpf";
+		paramCpf.Value = cpf;
+		comando.Parameters.Add(paramCpf);
+
+		using var reader = comando.ExecuteReader();
+		if (reader.Read())
+		{
+			return new Aluno
+			{
+				Id = reader.GetInt32("id_aluno"),
+				Cpf = reader.GetString("cpf"),
+				Nascimento = reader.GetDateTime("nascimento")
+			};
+		}
+		return null; // Retorna null se não encontrar
+	}
 }

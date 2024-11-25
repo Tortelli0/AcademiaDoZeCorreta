@@ -22,7 +22,6 @@ public class ColaboradorRepository
 
 	// implementa os métodos de CRUD, utilizando DBProviderFactory
 
-
 	// método para carregar os dados aqui
 	public List<Colaborador> GetAll()
 	{
@@ -70,19 +69,19 @@ public class ColaboradorRepository
 		conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
 		using var comando = factory.CreateCommand(); //Cria comando
 		comando!.Connection = conexao; //Atribui conexão
-		
+
 		//Adiciona parâmetro (@campo e valor)
 		var cpf = comando.CreateParameter(); cpf.ParameterName = "@cpf"; cpf.Value = dado.Cpf; comando.Parameters.Add(cpf);
-		var telefone = comando.CreateParameter(); telefone.ParameterName = "@telefone"; telefone.Value = dado.Telefone; comando.Parameters.Add(telefone); 
-		var nome = comando.CreateParameter(); nome.ParameterName = "@nome"; nome.Value = dado.Nome; comando.Parameters.Add(nome); 
-		var nascimento = comando.CreateParameter(); nascimento.ParameterName = "@nascimento"; nascimento.Value = dado.Nascimento; comando.Parameters.Add(nascimento); 
-		var email = comando.CreateParameter(); email.ParameterName = "@email"; email.Value = dado.Email; comando.Parameters.Add(email); 
-		var logradouro_id = comando.CreateParameter(); logradouro_id.ParameterName = "@logradouro_id"; logradouro_id.Value = dado.LogradouroId; comando.Parameters.Add(logradouro_id); 
-		var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero); 
-		var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento); 
+		var telefone = comando.CreateParameter(); telefone.ParameterName = "@telefone"; telefone.Value = dado.Telefone; comando.Parameters.Add(telefone);
+		var nome = comando.CreateParameter(); nome.ParameterName = "@nome"; nome.Value = dado.Nome; comando.Parameters.Add(nome);
+		var nascimento = comando.CreateParameter(); nascimento.ParameterName = "@nascimento"; nascimento.Value = dado.Nascimento; comando.Parameters.Add(nascimento);
+		var email = comando.CreateParameter(); email.ParameterName = "@email"; email.Value = dado.Email; comando.Parameters.Add(email);
+		var logradouro_id = comando.CreateParameter(); logradouro_id.ParameterName = "@logradouro_id"; logradouro_id.Value = dado.LogradouroId; comando.Parameters.Add(logradouro_id);
+		var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero);
+		var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento);
 		var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = ""; /*dado.Senha;*/ comando.Parameters.Add(senha);
-		var admissao = comando.CreateParameter(); admissao.ParameterName = "@admissao"; admissao.Value = dado.Admissao; comando.Parameters.Add(admissao); 
-		
+		var admissao = comando.CreateParameter(); admissao.ParameterName = "@admissao"; admissao.Value = dado.Admissao; comando.Parameters.Add(admissao);
+
 		var tipo = comando.CreateParameter();
 		tipo.ParameterName = "@tipo";
 		tipo.Value = (char)dado.Tipo;
@@ -109,20 +108,20 @@ public class ColaboradorRepository
 		conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
 		using var comando = factory.CreateCommand(); //Cria comando
 		comando!.Connection = conexao; //Atribui conexão
-									   
-		//Adiciona parâmetro (@campo e valor) 
-		var id = comando.CreateParameter(); id.ParameterName = "@id"; id.Value = dado.Id; comando.Parameters.Add(id); 
-		var cpf = comando.CreateParameter(); cpf.ParameterName = "@cpf"; cpf.Value = dado.Cpf; comando.Parameters.Add(cpf); 
-		var telefone = comando.CreateParameter(); telefone.ParameterName = "@telefone"; telefone.Value = dado.Telefone; comando.Parameters.Add(telefone); 
-		var nome = comando.CreateParameter(); nome.ParameterName = "@nome"; nome.Value = dado.Nome; comando.Parameters.Add(nome); 
-		var nascimento = comando.CreateParameter(); nascimento.ParameterName = "@nascimento"; nascimento.Value = dado.Nascimento; comando.Parameters.Add(nascimento); 
-		var email = comando.CreateParameter(); email.ParameterName = "@email"; email.Value = dado.Email; comando.Parameters.Add(email); 
-		var logradouro_id = comando.CreateParameter(); logradouro_id.ParameterName = "@logradouro_id"; logradouro_id.Value = dado.LogradouroId; comando.Parameters.Add(logradouro_id); 
-		var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero); 
-		var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento); 
-		var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = dado.Senha; comando.Parameters.Add(senha); 
-		var admissao = comando.CreateParameter(); admissao.ParameterName = "@admissao"; admissao.Value = dado.Admissao; comando.Parameters.Add(admissao); 
-		
+
+		//Adiciona parâmetro (@campo e valor)
+		var id = comando.CreateParameter(); id.ParameterName = "@id"; id.Value = dado.Id; comando.Parameters.Add(id);
+		var cpf = comando.CreateParameter(); cpf.ParameterName = "@cpf"; cpf.Value = dado.Cpf; comando.Parameters.Add(cpf);
+		var telefone = comando.CreateParameter(); telefone.ParameterName = "@telefone"; telefone.Value = dado.Telefone; comando.Parameters.Add(telefone);
+		var nome = comando.CreateParameter(); nome.ParameterName = "@nome"; nome.Value = dado.Nome; comando.Parameters.Add(nome);
+		var nascimento = comando.CreateParameter(); nascimento.ParameterName = "@nascimento"; nascimento.Value = dado.Nascimento; comando.Parameters.Add(nascimento);
+		var email = comando.CreateParameter(); email.ParameterName = "@email"; email.Value = dado.Email; comando.Parameters.Add(email);
+		var logradouro_id = comando.CreateParameter(); logradouro_id.ParameterName = "@logradouro_id"; logradouro_id.Value = dado.LogradouroId; comando.Parameters.Add(logradouro_id);
+		var numero = comando.CreateParameter(); numero.ParameterName = "@numero"; numero.Value = dado.Numero; comando.Parameters.Add(numero);
+		var complemento = comando.CreateParameter(); complemento.ParameterName = "@complemento"; complemento.Value = dado.Complemento; comando.Parameters.Add(complemento);
+		var senha = comando.CreateParameter(); senha.ParameterName = "@senha"; senha.Value = dado.Senha; comando.Parameters.Add(senha);
+		var admissao = comando.CreateParameter(); admissao.ParameterName = "@admissao"; admissao.Value = dado.Admissao; comando.Parameters.Add(admissao);
+
 		var tipo = comando.CreateParameter();
 		tipo.ParameterName = "@tipo";
 		tipo.Value = (char)dado.Tipo;
@@ -166,4 +165,46 @@ public class ColaboradorRepository
 		_ = comando.ExecuteNonQuery();
 	}
 
+	public Colaborador BuscarColaboradorPorCpf(string cpf)
+	{
+		using var conexao = factory.CreateConnection(); // Cria conexão
+		conexao!.ConnectionString = ConnectionString; // Atribui a string de conexão
+
+		var query = "SELECT * FROM tb_colaborador WHERE cpf = @cpf"; // Atualiza a tabela correta
+
+		using var comando = factory.CreateCommand(); // Cria comando
+		comando!.Connection = conexao; // Atribui conexão
+		comando.CommandText = query; // Atribui a consulta
+
+		// Adiciona o parâmetro para CPF
+		var paramCpf = comando.CreateParameter();
+		paramCpf.ParameterName = "@cpf";
+		paramCpf.Value = cpf.Trim(); // Remove espaços extras
+		comando.Parameters.Add(paramCpf);
+
+		conexao.Open(); // Abre conexão
+		using var reader = comando.ExecuteReader(); // Executa o comando e lê os resultados
+
+		if (reader.Read()) // Verifica se há resultados
+		{
+			return new Colaborador
+			{
+				Id = reader.GetInt32(reader.GetOrdinal("id_colaborador")),
+				Nome = reader.GetString(reader.GetOrdinal("nome")),
+				Cpf = reader.GetString(reader.GetOrdinal("cpf")),
+				Telefone = reader.GetString(reader.GetOrdinal("telefone")),
+				Nascimento = reader.GetDateTime(reader.GetOrdinal("nascimento")),
+				Email = reader.GetString(reader.GetOrdinal("email")),
+				LogradouroId = reader.GetInt32(reader.GetOrdinal("logradouro_id")),
+				Numero = reader.GetString(reader.GetOrdinal("numero")),
+				Complemento = reader.GetString(reader.GetOrdinal("complemento")),
+				Senha = reader.GetString(reader.GetOrdinal("senha")),
+				Admissao = reader.GetDateTime(reader.GetOrdinal("admissao")),
+				Tipo = (EnumColaboradorTipo)reader.GetString(reader.GetOrdinal("tipo"))[0],
+				Vinculo = (EnumColaboradorVinculo)reader.GetString(reader.GetOrdinal("vinculo"))[0]
+			};
+		}
+
+		return null; // Retorna null se não encontrar
+	}
 }

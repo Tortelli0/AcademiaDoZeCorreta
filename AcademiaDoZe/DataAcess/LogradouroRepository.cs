@@ -1,72 +1,61 @@
 ﻿using AcademiaDoZe.Model;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AcademiaDoZe.DataAcess
 {
-    class LogradouroRepository
-    {
-	    private readonly DbProviderFactory factory;
-	    private string ConnectionString { get; set; }
-	    private string ProviderName { get; set; }
+	internal class LogradouroRepository
+	{
+		private readonly DbProviderFactory factory;
+		private string ConnectionString { get; set; }
+		private string ProviderName { get; set; }
 
-	    public LogradouroRepository()
-	    {
-		    // buscar os dados de connectionstring e provider do arquivo de configuração
-		    ProviderName = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
-		    ConnectionString = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
-		    // define a factory, ou seja, o provedor de dados - Mysql, SqlServer, etc
-		    factory = DbProviderFactories.GetFactory(ProviderName);
-	    }
+		public LogradouroRepository()
+		{
+			ProviderName = ConfigurationManager.ConnectionStrings["BD"].ProviderName;
+			ConnectionString = ConfigurationManager.ConnectionStrings["BD"].ConnectionString;
+			factory = DbProviderFactories.GetFactory(ProviderName);
+		}
 
-	    public Logradouro GetOne(Logradouro dado)
-	    {
-		    using var conexao = factory.CreateConnection(); //Cria conexão
-		    conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-		    using var comando = factory.CreateCommand(); //Cria comando
-		    comando!.Connection = conexao; //Atribui conexão
-		    //Adiciona parâmetro (@campo e valor)
-		    var cep = comando.CreateParameter();
-		    cep.ParameterName = "@cep";
-		    cep.Value = dado.Cep.Trim();
-		    comando.Parameters.Add(cep);
-		    conexao.Open();
-		    comando.CommandText = @"SELECT id_logradouro, cep, pais, uf, cidade, bairro, logradouro FROM tb_logradouro WHERE TRIM(cep) = @cep;";
-		    using var reader = comando.ExecuteReader();
-		    // carrega os dados para ser retornado e utilizado no databinding
-		    Logradouro dadosRetorno = new Logradouro();
-		    while (reader.Read())
-		    {
-			    dadosRetorno.Id = reader.GetInt32(0);
-			    dadosRetorno.Cep = reader.GetString(1);
-			    dadosRetorno.Pais = reader.GetString(2);
-			    dadosRetorno.Uf = reader.GetString(3);
-			    dadosRetorno.Cidade = reader.GetString(4);
-			    dadosRetorno.Bairro = reader.GetString(5);
-			    dadosRetorno.Nome = reader.GetString(6);
-		    }
-		    return dadosRetorno;
-	    }
+		public Logradouro GetOne(Logradouro dado)
+		{
+			using var conexao = factory.CreateConnection();
+			conexao!.ConnectionString = ConnectionString;
+			using var comando = factory.CreateCommand();
+			comando!.Connection = conexao;
 
-		// implementa os métodos de CRUD, utilizando DBProviderFactory
+			var cep = comando.CreateParameter();
+			cep.ParameterName = "@cep";
+			cep.Value = dado.Cep.Trim();
+			comando.Parameters.Add(cep);
+			conexao.Open();
+			comando.CommandText = @"SELECT id_logradouro, cep, pais, uf, cidade, bairro, logradouro FROM tb_logradouro WHERE TRIM(cep) = @cep;";
+			using var reader = comando.ExecuteReader();
 
+			Logradouro dadosRetorno = new Logradouro();
+			while (reader.Read())
+			{
+				dadosRetorno.Id = reader.GetInt32(0);
+				dadosRetorno.Cep = reader.GetString(1);
+				dadosRetorno.Pais = reader.GetString(2);
+				dadosRetorno.Uf = reader.GetString(3);
+				dadosRetorno.Cidade = reader.GetString(4);
+				dadosRetorno.Bairro = reader.GetString(5);
+				dadosRetorno.Nome = reader.GetString(6);
+			}
+			return dadosRetorno;
+		}
 
-		// método para carregar os dados aqui
 		public List<Logradouro> GetAll()
 		{
-			using var conexao = factory.CreateConnection(); //Cria conexão
-			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-			using var comando = factory.CreateCommand(); //Cria comando
-			comando!.Connection = conexao; //Atribui conexão
+			using var conexao = factory.CreateConnection();
+			conexao!.ConnectionString = ConnectionString;
+			using var comando = factory.CreateCommand();
+			comando!.Connection = conexao;
 			conexao.Open();
 			comando.CommandText = @"SELECT id_logradouro, cep, pais, uf, cidade, bairro, logradouro FROM tb_logradouro;";
 			using var reader = comando.ExecuteReader();
-			// carrega os dados para ser retornado e utilizado no databinding
+
 			List<Logradouro> dadosRetorno = new List<Logradouro>();
 			while (reader.Read())
 			{
@@ -84,15 +73,13 @@ namespace AcademiaDoZe.DataAcess
 			return dadosRetorno;
 		}
 
-		// método para inserir os dados aqui
 		public void Add(Logradouro dado)
 		{
-			using var conexao = factory.CreateConnection(); //Cria conexão
-			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-			using var comando = factory.CreateCommand(); //Cria comando
-			comando!.Connection = conexao; //Atribui conexão
+			using var conexao = factory.CreateConnection();
+			conexao!.ConnectionString = ConnectionString;
+			using var comando = factory.CreateCommand();
+			comando!.Connection = conexao;
 
-			//Adiciona parâmetro (@campo e valor)
 			var cep = comando.CreateParameter(); cep.ParameterName = "@cep";
 			cep.Value = dado.Cep; comando.Parameters.Add(cep);
 
@@ -115,19 +102,16 @@ namespace AcademiaDoZe.DataAcess
 
 			comando.CommandText = @"INSERT INTO tb_logradouro (cep, pais, uf, cidade, bairro, logradouro) VALUES (@cep, @pais, @uf, @cidade, @bairro, @logradouro);";
 
-			//Executa o script na conexão e armazena o número de linhas afetadas.
 			var linhas = comando.ExecuteNonQuery();
 		}
 
-		// método para atualizar os dados aqui
 		public void Update(Logradouro dado)
 		{
-			using var conexao = factory.CreateConnection(); //Cria conexão
-			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-			using var comando = factory.CreateCommand(); //Cria comando
-			comando!.Connection = conexao; //Atribui conexão
+			using var conexao = factory.CreateConnection();
+			conexao!.ConnectionString = ConnectionString;
+			using var comando = factory.CreateCommand();
+			comando!.Connection = conexao;
 
-			//Adiciona parâmetro (@campo e valor)
 			var id = comando.CreateParameter(); id.ParameterName = "@id";
 			id.Value = dado.Id; comando.Parameters.Add(id);
 
@@ -151,22 +135,18 @@ namespace AcademiaDoZe.DataAcess
 
 			conexao.Open();
 
-			//realiza o UPDATE
 			comando.CommandText = @"UPDATE tb_logradouro SET cep = @cep, pais = @pais, uf = @uf, cidade = @cidade, bairro = @bairro, logradouro = @logradouro WHERE id_logradouro = @id;";
 
-			//executa o comando no banco de dados _ = comando.ExecuteNonQuery();
 			_ = comando.ExecuteNonQuery();
 		}
 
-		// método para deletar os dados aqui
 		public void Delete(Logradouro dado)
 		{
-			using var conexao = factory.CreateConnection(); //Cria conexão
-			conexao!.ConnectionString = ConnectionString; //Atribui a string de conexão
-			using var comando = factory.CreateCommand(); //Cria comando
-			comando!.Connection = conexao; //Atribui conexão
+			using var conexao = factory.CreateConnection();
+			conexao!.ConnectionString = ConnectionString;
+			using var comando = factory.CreateCommand();
+			comando!.Connection = conexao;
 
-			//Adiciona parâmetro (@campo e valor)
 			var id = comando.CreateParameter();
 			id.ParameterName = "@id";
 			id.Value = dado.Id;
@@ -174,11 +154,9 @@ namespace AcademiaDoZe.DataAcess
 
 			conexao.Open();
 
-			//realiza o DELETE
 			comando.CommandText = @"DELETE FROM tb_logradouro WHERE id_logradouro = @id;";
 
-			//executa o comando no banco de dados _ = comando.ExecuteNonQuery();
-			_= comando.ExecuteNonQuery();
+			_ = comando.ExecuteNonQuery();
 		}
 	}
 }

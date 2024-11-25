@@ -9,6 +9,7 @@ public class ColaboradorViewModel : ViewModelBase
 {
 	// Objetos utilizados no Databinding, recurso que permite a sincronização automática entre View e ViewModel, através da propriedade DataContext da View.
 	public ObservableCollection<Colaborador> Colaboradors { get; set; }
+
 	private Colaborador _selectedColaborador;
 
 	public Colaborador SelectedColaborador
@@ -29,6 +30,7 @@ public class ColaboradorViewModel : ViewModelBase
 
 	// Comandos para o CRUD
 	public RelayCommand ColaboradorAdicionarCommand { get; set; }
+
 	public RelayCommand ColaboradorAtualizarCommand { get; set; }
 	public RelayCommand ColaboradorRemoverCommand { get; set; }
 

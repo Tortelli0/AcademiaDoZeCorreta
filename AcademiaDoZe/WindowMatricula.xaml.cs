@@ -1,34 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AcademiaDoZe.DataAcess;
+using AcademiaDoZe.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace AcademiaDoZe;
+
 /// <summary>
 /// Lógica interna para WindowMatricula.xaml
 /// </summary>
 public partial class WindowMatricula : Window
 {
-	private string ConnectionString { get; set; }
-	private string ProviderName { get; set; }
+	//private string ConnectionString { get; set; }
+	//private string ProviderName { get; set; }
 
-	public WindowMatricula(string connectionString, string providerName)
+	private readonly AlunoRepository _alunoRepository;
+
+	public WindowMatricula()
 	{
 		InitializeComponent();
 
 		this.Loaded += Page_Loaded;
 
-		this.ConnectionString = connectionString;
-		this.ProviderName = providerName;
+		DataContext = new MatriculaCadastroViewModel();
+		InitializeComponent();
+		DataContext = new MatriculaCadastroViewModel();
+		_alunoRepository = new AlunoRepository();
+
+		//this.ConnectionString = connectionString;
+		//this.ProviderName = providerName;
 	}
 
 	private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -200,6 +200,58 @@ public partial class WindowMatricula : Window
 		if (e.Key == Key.Escape)
 		{
 			this.Close();
+		}
+	}
+
+	private void btnBuscarCpf_Click(object sender, RoutedEventArgs e)
+	{
+		string cpf = txtCpfAluno.Text.Trim();
+
+		try
+		{
+			var aluno = _alunoRepository.BuscarAlunoPorCpf(cpf);
+			if (aluno != null)
+			{
+				var viewModel = DataContext as MatriculaCadastroViewModel;
+				if (viewModel != null)
+				{
+					viewModel.IdAluno = aluno.Id;
+					viewModel.Matricula.IdAluno = aluno.Id;
+				}
+
+				MessageBox.Show("Aluno encontrado!");
+			}
+			else
+			{
+				MessageBox.Show("Aluno não encontrado! Verifique o CPF informado.");
+			}
+		}
+		catch (Exception ex)
+		{
+			MessageBox.Show($"Erro ao buscar aluno pelo CPF: {ex.Message}");
+		}
+	}
+
+	private void btnBuscarCpfColaborador_Click(object sender, RoutedEventArgs e)
+	{
+		string cpf = txtCpfColaborador.Text.Trim();
+
+		if (string.IsNullOrEmpty(cpf))
+		{
+			MessageBox.Show("Por favor, insira um CPF válido.");
+			return;
+		}
+
+		var colaborador = new ColaboradorRepository().BuscarColaboradorPorCpf(cpf);
+
+		if (colaborador != null)
+		{
+			//txtIdColaborador.Text = colaborador.Id.ToString();
+			MessageBox.Show($"Colaborador encontrado: {colaborador.Nome}");
+		}
+		else
+		{
+			MessageBox.Show("Colaborador não encontrado.", "Erro", MessageBoxButton.OK, MessageBoxImage.Warning);
 		}
 	}
 }
